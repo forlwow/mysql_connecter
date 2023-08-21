@@ -1,0 +1,5 @@
+.vscode/
+.text/
+/output
+*.exe
+*.vsdx
