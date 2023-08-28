@@ -1,5 +1,5 @@
-.vscode/
-.text/
+/.vscode
+/test
 /output
 *.exe
 *.vsdx

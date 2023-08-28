@@ -1,0 +1,70 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-fd7e8a8bdb851828a934.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "mysql_connecter",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "mysql_connecter::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mysql_connecter-Debug-0674299f111f9435b5e9.json",
+					"name" : "mysql_connecter",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "mysql_connecter_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mysql_connecter_autogen-Debug-f828a8acc3cdc957710d.json",
+					"name" : "mysql_connecter_autogen",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build",
+		"source" : "D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

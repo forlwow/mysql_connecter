@@ -1,0 +1,8 @@
+D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/CMakeFiles/mysql_connecter.dir
+D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/CMakeFiles/edit_cache.dir
+D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/CMakeFiles/rebuild_cache.dir
+D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/CMakeFiles/list_install_components.dir
+D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/CMakeFiles/install.dir
+D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/CMakeFiles/install/local.dir
+D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/CMakeFiles/install/strip.dir
+D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/CMakeFiles/mysql_connecter_autogen.dir
