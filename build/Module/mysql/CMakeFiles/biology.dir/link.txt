@@ -1,0 +1,2 @@
+D:\Tiny\MinGW\mingw64\bin\ar.exe qc libbiology.a CMakeFiles/biology.dir/biology_autogen/mocs_compilation.cpp.obj
+D:\Tiny\MinGW\mingw64\bin\ranlib.exe libbiology.a

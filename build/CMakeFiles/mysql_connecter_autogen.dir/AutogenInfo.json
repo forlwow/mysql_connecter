@@ -298,7 +298,7 @@
 	"MOC_INCLUDES" : 
 	[
 		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/include",
-		"D:/Mysql/MySQL 8.0/include",
+		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/Module/mysql/include",
 		"D:/CppQt/6.2.4/mingw_64/include/QtCore",
 		"D:/CppQt/6.2.4/mingw_64/include",
 		"D:/CppQt/6.2.4/mingw_64/mkspecs/win32-g++",
@@ -316,7 +316,7 @@
 	"MOC_PATH_PREFIX" : false,
 	"MOC_PREDEFS_CMD" : 
 	[
-		"D:/Tiny/MinGW/mingw64/bin/c++.exe",
+		"D:/Tiny/MinGW/mingw64/bin/g++.exe",
 		"-dM",
 		"-E",
 		"-c",

@@ -292,8 +292,24 @@ D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/include/mainwindow.h
  mdp:D:/Tiny/MinGW/mingw64/x86_64-w64-mingw32/include/vadefs.h
  mdp:D:/Tiny/MinGW/mingw64/x86_64-w64-mingw32/include/wchar.h
  mdp:D:/Tiny/MinGW/mingw64/x86_64-w64-mingw32/include/wctype.h
+D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/Module/mysql/include/mysql_com.h
 D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/include/test.h
+D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/Module/mysql/include/errmsg.h
+D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/Module/mysql/include/mysql.h
+D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/src/main.cpp
 D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/src/mainwindow.cpp
  uic:./ui_mainwindow.h
-D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/src/main.cpp
+D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/Module/mysql/include/field_types.h
 D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/src/test.cpp
+D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/Module/mysql/include/my_command.h
+D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/Module/mysql/include/my_compress.h
+D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/Module/mysql/include/my_list.h
+D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/Module/mysql/include/mysql/client_plugin.h
+D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/Module/mysql/include/mysql/plugin_auth_common.h
+D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/Module/mysql/include/mysql/udf_registration_types.h
+D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/Module/mysql/include/mysql_time.h
+D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/Module/mysql/include/mysql_version.h
+D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/Module/mysql/include/mysqld_error.h
+D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/Module/mysql/include/mysqlx_ername.h
+D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/Module/mysql/include/mysqlx_error.h
+D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/Module/mysql/include/mysqlx_version.h

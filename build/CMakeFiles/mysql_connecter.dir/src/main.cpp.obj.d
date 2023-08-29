@@ -1,6 +1,6 @@
 CMakeFiles/mysql_connecter.dir/src/main.cpp.obj: \
- D:/OneDrive/OneDrive\ -\ MSFT/Codes_Qt/mysql_connecter/src/main.cpp \
- D:/OneDrive/OneDrive\ -\ MSFT/Codes_Qt/mysql_connecter/include/mainwindow.h \
+ D:\OneDrive\OneDrive\ -\ MSFT\Codes_Qt\mysql_connecter\src\main.cpp \
+ D:/OneDrive/ONEDRI~2/Codes_Qt/MYSQL_~1/include/mainwindow.h \
  D:/CppQt/6.2.4/mingw_64/include/QtWidgets/QMainWindow \
  D:/CppQt/6.2.4/mingw_64/include/QtWidgets/qmainwindow.h \
  D:/CppQt/6.2.4/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
