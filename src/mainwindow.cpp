@@ -2,7 +2,7 @@
 #include "./ui_mainwindow.h"
 #include "winsock.h"
 #include "mysql.h"
-#include "test.h"
+#include "other.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <QDebug>
@@ -24,6 +24,7 @@ MainWindow::MainWindow(QWidget *parent)
         else{
             qDebug() << "q error";
         }
+        mysql_close(sql_con);
     }
     catch (...){
         print("Error");

@@ -308,4 +308,8 @@ CMakeFiles/mysql_connecter.dir/mysql_connecter_autogen/mocs_compilation.cpp.obj:
  D:/CppQt/6.2.4/mingw_64/include/QtGui/qbitmap.h \
  D:/CppQt/6.2.4/mingw_64/include/QtGui/qkeysequence.h \
  D:/CppQt/6.2.4/mingw_64/include/QtWidgets/qtabwidget.h \
- D:/CppQt/6.2.4/mingw_64/include/QtGui/qicon.h
+ D:/CppQt/6.2.4/mingw_64/include/QtGui/qicon.h \
+ D:\OneDrive\OneDrive\ -\ MSFT\Codes_Qt\mysql_connecter\build\mysql_connecter_autogen\6YEA5652QU/moc_new_sql_connect.cpp \
+ D:/OneDrive/OneDrive\ -\ MSFT/Codes_Qt/mysql_connecter/include/new_sql_connect.h \
+ D:/CppQt/6.2.4/mingw_64/include/QtWidgets/QWidget \
+ D:/CppQt/6.2.4/mingw_64/include/QtWidgets/qwidget.h

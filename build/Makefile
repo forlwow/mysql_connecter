@@ -161,17 +161,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named sql_lib
+# Target rules for targets named ui
 
 # Build rule for target.
-sql_lib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 sql_lib
-.PHONY : sql_lib
+ui: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 ui
+.PHONY : ui
 
 # fast build rule for target.
-sql_lib/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\sql_lib.dir\build.make CMakeFiles/sql_lib.dir/build
-.PHONY : sql_lib/fast
+ui/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ui.dir\build.make CMakeFiles/ui.dir/build
+.PHONY : ui/fast
 
 #=============================================================================
 # Target rules for targets named mysql_connecter
@@ -187,17 +187,17 @@ mysql_connecter/fast:
 .PHONY : mysql_connecter/fast
 
 #=============================================================================
-# Target rules for targets named sql_lib_autogen
+# Target rules for targets named ui_autogen
 
 # Build rule for target.
-sql_lib_autogen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 sql_lib_autogen
-.PHONY : sql_lib_autogen
+ui_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 ui_autogen
+.PHONY : ui_autogen
 
 # fast build rule for target.
-sql_lib_autogen/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\sql_lib_autogen.dir\build.make CMakeFiles/sql_lib_autogen.dir/build
-.PHONY : sql_lib_autogen/fast
+ui_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ui_autogen.dir\build.make CMakeFiles/ui_autogen.dir/build
+.PHONY : ui_autogen/fast
 
 #=============================================================================
 # Target rules for targets named mysql_connecter_autogen
@@ -235,30 +235,6 @@ mysql_connecter_autogen/mocs_compilation.s: mysql_connecter_autogen/mocs_compila
 mysql_connecter_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mysql_connecter.dir\build.make CMakeFiles/mysql_connecter.dir/mysql_connecter_autogen/mocs_compilation.cpp.s
 .PHONY : mysql_connecter_autogen/mocs_compilation.cpp.s
-
-sql_lib_autogen/mocs_compilation.obj: sql_lib_autogen/mocs_compilation.cpp.obj
-.PHONY : sql_lib_autogen/mocs_compilation.obj
-
-# target to build an object file
-sql_lib_autogen/mocs_compilation.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\sql_lib.dir\build.make CMakeFiles/sql_lib.dir/sql_lib_autogen/mocs_compilation.cpp.obj
-.PHONY : sql_lib_autogen/mocs_compilation.cpp.obj
-
-sql_lib_autogen/mocs_compilation.i: sql_lib_autogen/mocs_compilation.cpp.i
-.PHONY : sql_lib_autogen/mocs_compilation.i
-
-# target to preprocess a source file
-sql_lib_autogen/mocs_compilation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\sql_lib.dir\build.make CMakeFiles/sql_lib.dir/sql_lib_autogen/mocs_compilation.cpp.i
-.PHONY : sql_lib_autogen/mocs_compilation.cpp.i
-
-sql_lib_autogen/mocs_compilation.s: sql_lib_autogen/mocs_compilation.cpp.s
-.PHONY : sql_lib_autogen/mocs_compilation.s
-
-# target to generate assembly for a file
-sql_lib_autogen/mocs_compilation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\sql_lib.dir\build.make CMakeFiles/sql_lib.dir/sql_lib_autogen/mocs_compilation.cpp.s
-.PHONY : sql_lib_autogen/mocs_compilation.cpp.s
 
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
@@ -308,29 +284,77 @@ src/mainwindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mysql_connecter.dir\build.make CMakeFiles/mysql_connecter.dir/src/mainwindow.cpp.s
 .PHONY : src/mainwindow.cpp.s
 
-src/test.obj: src/test.cpp.obj
-.PHONY : src/test.obj
+src/new_sql_connect.obj: src/new_sql_connect.cpp.obj
+.PHONY : src/new_sql_connect.obj
 
 # target to build an object file
-src/test.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mysql_connecter.dir\build.make CMakeFiles/mysql_connecter.dir/src/test.cpp.obj
-.PHONY : src/test.cpp.obj
+src/new_sql_connect.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mysql_connecter.dir\build.make CMakeFiles/mysql_connecter.dir/src/new_sql_connect.cpp.obj
+.PHONY : src/new_sql_connect.cpp.obj
 
-src/test.i: src/test.cpp.i
-.PHONY : src/test.i
+src/new_sql_connect.i: src/new_sql_connect.cpp.i
+.PHONY : src/new_sql_connect.i
 
 # target to preprocess a source file
-src/test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mysql_connecter.dir\build.make CMakeFiles/mysql_connecter.dir/src/test.cpp.i
-.PHONY : src/test.cpp.i
+src/new_sql_connect.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mysql_connecter.dir\build.make CMakeFiles/mysql_connecter.dir/src/new_sql_connect.cpp.i
+.PHONY : src/new_sql_connect.cpp.i
 
-src/test.s: src/test.cpp.s
-.PHONY : src/test.s
+src/new_sql_connect.s: src/new_sql_connect.cpp.s
+.PHONY : src/new_sql_connect.s
 
 # target to generate assembly for a file
-src/test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mysql_connecter.dir\build.make CMakeFiles/mysql_connecter.dir/src/test.cpp.s
-.PHONY : src/test.cpp.s
+src/new_sql_connect.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mysql_connecter.dir\build.make CMakeFiles/mysql_connecter.dir/src/new_sql_connect.cpp.s
+.PHONY : src/new_sql_connect.cpp.s
+
+src/other.obj: src/other.cpp.obj
+.PHONY : src/other.obj
+
+# target to build an object file
+src/other.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mysql_connecter.dir\build.make CMakeFiles/mysql_connecter.dir/src/other.cpp.obj
+.PHONY : src/other.cpp.obj
+
+src/other.i: src/other.cpp.i
+.PHONY : src/other.i
+
+# target to preprocess a source file
+src/other.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mysql_connecter.dir\build.make CMakeFiles/mysql_connecter.dir/src/other.cpp.i
+.PHONY : src/other.cpp.i
+
+src/other.s: src/other.cpp.s
+.PHONY : src/other.s
+
+# target to generate assembly for a file
+src/other.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mysql_connecter.dir\build.make CMakeFiles/mysql_connecter.dir/src/other.cpp.s
+.PHONY : src/other.cpp.s
+
+ui_autogen/mocs_compilation.obj: ui_autogen/mocs_compilation.cpp.obj
+.PHONY : ui_autogen/mocs_compilation.obj
+
+# target to build an object file
+ui_autogen/mocs_compilation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ui.dir\build.make CMakeFiles/ui.dir/ui_autogen/mocs_compilation.cpp.obj
+.PHONY : ui_autogen/mocs_compilation.cpp.obj
+
+ui_autogen/mocs_compilation.i: ui_autogen/mocs_compilation.cpp.i
+.PHONY : ui_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+ui_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ui.dir\build.make CMakeFiles/ui.dir/ui_autogen/mocs_compilation.cpp.i
+.PHONY : ui_autogen/mocs_compilation.cpp.i
+
+ui_autogen/mocs_compilation.s: ui_autogen/mocs_compilation.cpp.s
+.PHONY : ui_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+ui_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ui.dir\build.make CMakeFiles/ui.dir/ui_autogen/mocs_compilation.cpp.s
+.PHONY : ui_autogen/mocs_compilation.cpp.s
 
 # Help Target
 help:
@@ -345,24 +369,27 @@ help:
 	@echo ... list_install_components
 	@echo ... rebuild_cache
 	@echo ... mysql_connecter_autogen
-	@echo ... sql_lib_autogen
+	@echo ... ui_autogen
 	@echo ... mysql_connecter
-	@echo ... sql_lib
+	@echo ... ui
 	@echo ... mysql_connecter_autogen/mocs_compilation.obj
 	@echo ... mysql_connecter_autogen/mocs_compilation.i
 	@echo ... mysql_connecter_autogen/mocs_compilation.s
-	@echo ... sql_lib_autogen/mocs_compilation.obj
-	@echo ... sql_lib_autogen/mocs_compilation.i
-	@echo ... sql_lib_autogen/mocs_compilation.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
 	@echo ... src/mainwindow.obj
 	@echo ... src/mainwindow.i
 	@echo ... src/mainwindow.s
-	@echo ... src/test.obj
-	@echo ... src/test.i
-	@echo ... src/test.s
+	@echo ... src/new_sql_connect.obj
+	@echo ... src/new_sql_connect.i
+	@echo ... src/new_sql_connect.s
+	@echo ... src/other.obj
+	@echo ... src/other.i
+	@echo ... src/other.s
+	@echo ... ui_autogen/mocs_compilation.obj
+	@echo ... ui_autogen/mocs_compilation.i
+	@echo ... ui_autogen/mocs_compilation.s
 .PHONY : help
 
 

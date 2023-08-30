@@ -113,27 +113,43 @@ CMakeFiles/mysql_connecter.dir/src/mainwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mysql_connecter.dir/src/mainwindow.cpp.s"
 	D:\CppQt\Tools\mingw1120_64\bin\g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\OneDrive\OneDrive - MSFT\Codes_Qt\mysql_connecter\src\mainwindow.cpp" -o CMakeFiles\mysql_connecter.dir\src\mainwindow.cpp.s
 
-CMakeFiles/mysql_connecter.dir/src/test.cpp.obj: CMakeFiles/mysql_connecter.dir/flags.make
-CMakeFiles/mysql_connecter.dir/src/test.cpp.obj: CMakeFiles/mysql_connecter.dir/includes_CXX.rsp
-CMakeFiles/mysql_connecter.dir/src/test.cpp.obj: D:/OneDrive/OneDrive\ -\ MSFT/Codes_Qt/mysql_connecter/src/test.cpp
-CMakeFiles/mysql_connecter.dir/src/test.cpp.obj: CMakeFiles/mysql_connecter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\OneDrive\OneDrive - MSFT\Codes_Qt\mysql_connecter\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/mysql_connecter.dir/src/test.cpp.obj"
-	D:\CppQt\Tools\mingw1120_64\bin\g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mysql_connecter.dir/src/test.cpp.obj -MF CMakeFiles\mysql_connecter.dir\src\test.cpp.obj.d -o CMakeFiles\mysql_connecter.dir\src\test.cpp.obj -c "D:\OneDrive\OneDrive - MSFT\Codes_Qt\mysql_connecter\src\test.cpp"
+CMakeFiles/mysql_connecter.dir/src/new_sql_connect.cpp.obj: CMakeFiles/mysql_connecter.dir/flags.make
+CMakeFiles/mysql_connecter.dir/src/new_sql_connect.cpp.obj: CMakeFiles/mysql_connecter.dir/includes_CXX.rsp
+CMakeFiles/mysql_connecter.dir/src/new_sql_connect.cpp.obj: D:/OneDrive/OneDrive\ -\ MSFT/Codes_Qt/mysql_connecter/src/new_sql_connect.cpp
+CMakeFiles/mysql_connecter.dir/src/new_sql_connect.cpp.obj: CMakeFiles/mysql_connecter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\OneDrive\OneDrive - MSFT\Codes_Qt\mysql_connecter\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/mysql_connecter.dir/src/new_sql_connect.cpp.obj"
+	D:\CppQt\Tools\mingw1120_64\bin\g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mysql_connecter.dir/src/new_sql_connect.cpp.obj -MF CMakeFiles\mysql_connecter.dir\src\new_sql_connect.cpp.obj.d -o CMakeFiles\mysql_connecter.dir\src\new_sql_connect.cpp.obj -c "D:\OneDrive\OneDrive - MSFT\Codes_Qt\mysql_connecter\src\new_sql_connect.cpp"
 
-CMakeFiles/mysql_connecter.dir/src/test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mysql_connecter.dir/src/test.cpp.i"
-	D:\CppQt\Tools\mingw1120_64\bin\g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\OneDrive\OneDrive - MSFT\Codes_Qt\mysql_connecter\src\test.cpp" > CMakeFiles\mysql_connecter.dir\src\test.cpp.i
+CMakeFiles/mysql_connecter.dir/src/new_sql_connect.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mysql_connecter.dir/src/new_sql_connect.cpp.i"
+	D:\CppQt\Tools\mingw1120_64\bin\g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\OneDrive\OneDrive - MSFT\Codes_Qt\mysql_connecter\src\new_sql_connect.cpp" > CMakeFiles\mysql_connecter.dir\src\new_sql_connect.cpp.i
 
-CMakeFiles/mysql_connecter.dir/src/test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mysql_connecter.dir/src/test.cpp.s"
-	D:\CppQt\Tools\mingw1120_64\bin\g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\OneDrive\OneDrive - MSFT\Codes_Qt\mysql_connecter\src\test.cpp" -o CMakeFiles\mysql_connecter.dir\src\test.cpp.s
+CMakeFiles/mysql_connecter.dir/src/new_sql_connect.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mysql_connecter.dir/src/new_sql_connect.cpp.s"
+	D:\CppQt\Tools\mingw1120_64\bin\g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\OneDrive\OneDrive - MSFT\Codes_Qt\mysql_connecter\src\new_sql_connect.cpp" -o CMakeFiles\mysql_connecter.dir\src\new_sql_connect.cpp.s
+
+CMakeFiles/mysql_connecter.dir/src/other.cpp.obj: CMakeFiles/mysql_connecter.dir/flags.make
+CMakeFiles/mysql_connecter.dir/src/other.cpp.obj: CMakeFiles/mysql_connecter.dir/includes_CXX.rsp
+CMakeFiles/mysql_connecter.dir/src/other.cpp.obj: D:/OneDrive/OneDrive\ -\ MSFT/Codes_Qt/mysql_connecter/src/other.cpp
+CMakeFiles/mysql_connecter.dir/src/other.cpp.obj: CMakeFiles/mysql_connecter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\OneDrive\OneDrive - MSFT\Codes_Qt\mysql_connecter\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/mysql_connecter.dir/src/other.cpp.obj"
+	D:\CppQt\Tools\mingw1120_64\bin\g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mysql_connecter.dir/src/other.cpp.obj -MF CMakeFiles\mysql_connecter.dir\src\other.cpp.obj.d -o CMakeFiles\mysql_connecter.dir\src\other.cpp.obj -c "D:\OneDrive\OneDrive - MSFT\Codes_Qt\mysql_connecter\src\other.cpp"
+
+CMakeFiles/mysql_connecter.dir/src/other.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mysql_connecter.dir/src/other.cpp.i"
+	D:\CppQt\Tools\mingw1120_64\bin\g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\OneDrive\OneDrive - MSFT\Codes_Qt\mysql_connecter\src\other.cpp" > CMakeFiles\mysql_connecter.dir\src\other.cpp.i
+
+CMakeFiles/mysql_connecter.dir/src/other.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mysql_connecter.dir/src/other.cpp.s"
+	D:\CppQt\Tools\mingw1120_64\bin\g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\OneDrive\OneDrive - MSFT\Codes_Qt\mysql_connecter\src\other.cpp" -o CMakeFiles\mysql_connecter.dir\src\other.cpp.s
 
 # Object files for target mysql_connecter
 mysql_connecter_OBJECTS = \
 "CMakeFiles/mysql_connecter.dir/mysql_connecter_autogen/mocs_compilation.cpp.obj" \
 "CMakeFiles/mysql_connecter.dir/src/main.cpp.obj" \
 "CMakeFiles/mysql_connecter.dir/src/mainwindow.cpp.obj" \
-"CMakeFiles/mysql_connecter.dir/src/test.cpp.obj"
+"CMakeFiles/mysql_connecter.dir/src/new_sql_connect.cpp.obj" \
+"CMakeFiles/mysql_connecter.dir/src/other.cpp.obj"
 
 # External object files for target mysql_connecter
 mysql_connecter_EXTERNAL_OBJECTS =
@@ -141,7 +157,8 @@ mysql_connecter_EXTERNAL_OBJECTS =
 D:/OneDrive/OneDrive\ -\ MSFT/Codes_Qt/mysql_connecter/bin/mysql_connecter.exe: CMakeFiles/mysql_connecter.dir/mysql_connecter_autogen/mocs_compilation.cpp.obj
 D:/OneDrive/OneDrive\ -\ MSFT/Codes_Qt/mysql_connecter/bin/mysql_connecter.exe: CMakeFiles/mysql_connecter.dir/src/main.cpp.obj
 D:/OneDrive/OneDrive\ -\ MSFT/Codes_Qt/mysql_connecter/bin/mysql_connecter.exe: CMakeFiles/mysql_connecter.dir/src/mainwindow.cpp.obj
-D:/OneDrive/OneDrive\ -\ MSFT/Codes_Qt/mysql_connecter/bin/mysql_connecter.exe: CMakeFiles/mysql_connecter.dir/src/test.cpp.obj
+D:/OneDrive/OneDrive\ -\ MSFT/Codes_Qt/mysql_connecter/bin/mysql_connecter.exe: CMakeFiles/mysql_connecter.dir/src/new_sql_connect.cpp.obj
+D:/OneDrive/OneDrive\ -\ MSFT/Codes_Qt/mysql_connecter/bin/mysql_connecter.exe: CMakeFiles/mysql_connecter.dir/src/other.cpp.obj
 D:/OneDrive/OneDrive\ -\ MSFT/Codes_Qt/mysql_connecter/bin/mysql_connecter.exe: CMakeFiles/mysql_connecter.dir/build.make
 D:/OneDrive/OneDrive\ -\ MSFT/Codes_Qt/mysql_connecter/bin/mysql_connecter.exe: D:/CppQt/6.2.4/mingw_64/lib/libQt6Widgets.a
 D:/OneDrive/OneDrive\ -\ MSFT/Codes_Qt/mysql_connecter/bin/mysql_connecter.exe: D:/CppQt/6.2.4/mingw_64/lib/libQt6Gui.a
@@ -150,8 +167,9 @@ D:/OneDrive/OneDrive\ -\ MSFT/Codes_Qt/mysql_connecter/bin/mysql_connecter.exe: 
 D:/OneDrive/OneDrive\ -\ MSFT/Codes_Qt/mysql_connecter/bin/mysql_connecter.exe: CMakeFiles/mysql_connecter.dir/linklibs.rsp
 D:/OneDrive/OneDrive\ -\ MSFT/Codes_Qt/mysql_connecter/bin/mysql_connecter.exe: CMakeFiles/mysql_connecter.dir/objects1.rsp
 D:/OneDrive/OneDrive\ -\ MSFT/Codes_Qt/mysql_connecter/bin/mysql_connecter.exe: CMakeFiles/mysql_connecter.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="D:\OneDrive\OneDrive - MSFT\Codes_Qt\mysql_connecter\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable \"D:\OneDrive\OneDrive - MSFT\Codes_Qt\mysql_connecter\bin\mysql_connecter.exe\""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="D:\OneDrive\OneDrive - MSFT\Codes_Qt\mysql_connecter\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable \"D:\OneDrive\OneDrive - MSFT\Codes_Qt\mysql_connecter\bin\mysql_connecter.exe\""
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\mysql_connecter.dir\link.txt --verbose=$(VERBOSE)
+	D:\CppQt\Tools\CMake_64\bin\cmake.exe -E copy_if_different "D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/Module/mysql/lib/libcrypto-1_1-x64.dll" "D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/Module/mysql/lib/libmysql.dll" "D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/Module/mysql/lib/libssl-1_1-x64.dll" "D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/bin"
 
 # Rule to build all files generated by this target.
 CMakeFiles/mysql_connecter.dir/build: D:/OneDrive/OneDrive\ -\ MSFT/Codes_Qt/mysql_connecter/bin/mysql_connecter.exe

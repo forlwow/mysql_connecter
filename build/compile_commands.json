@@ -1,8 +1,8 @@
 [
 {
   "directory": "D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build",
-  "command": "D:\\CppQt\\Tools\\mingw1120_64\\bin\\g++ -Dsql_lib_EXPORTS @CMakeFiles/sql_lib.dir/includes_CXX.rsp  -O0 -Wall -g -ggdb -std=gnu++17 -o CMakeFiles\\sql_lib.dir\\sql_lib_autogen\\mocs_compilation.cpp.obj -c \"D:\\OneDrive\\OneDrive - MSFT\\Codes_Qt\\mysql_connecter\\build\\sql_lib_autogen\\mocs_compilation.cpp\"",
-  "file": "D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/sql_lib_autogen/mocs_compilation.cpp"
+  "command": "D:\\CppQt\\Tools\\mingw1120_64\\bin\\g++  @CMakeFiles/ui.dir/includes_CXX.rsp  -O0 -Wall -g -ggdb -std=gnu++17 -o CMakeFiles\\ui.dir\\ui_autogen\\mocs_compilation.cpp.obj -c \"D:\\OneDrive\\OneDrive - MSFT\\Codes_Qt\\mysql_connecter\\build\\ui_autogen\\mocs_compilation.cpp\"",
+  "file": "D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/ui_autogen/mocs_compilation.cpp"
 },
 {
   "directory": "D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build",
@@ -21,7 +21,12 @@
 },
 {
   "directory": "D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build",
-  "command": "D:\\CppQt\\Tools\\mingw1120_64\\bin\\g++ -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/mysql_connecter.dir/includes_CXX.rsp  -O0 -Wall -g -ggdb -std=gnu++17 -o CMakeFiles\\mysql_connecter.dir\\src\\test.cpp.obj -c \"D:\\OneDrive\\OneDrive - MSFT\\Codes_Qt\\mysql_connecter\\src\\test.cpp\"",
-  "file": "D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/src/test.cpp"
+  "command": "D:\\CppQt\\Tools\\mingw1120_64\\bin\\g++ -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/mysql_connecter.dir/includes_CXX.rsp  -O0 -Wall -g -ggdb -std=gnu++17 -o CMakeFiles\\mysql_connecter.dir\\src\\new_sql_connect.cpp.obj -c \"D:\\OneDrive\\OneDrive - MSFT\\Codes_Qt\\mysql_connecter\\src\\new_sql_connect.cpp\"",
+  "file": "D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/src/new_sql_connect.cpp"
+},
+{
+  "directory": "D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build",
+  "command": "D:\\CppQt\\Tools\\mingw1120_64\\bin\\g++ -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/mysql_connecter.dir/includes_CXX.rsp  -O0 -Wall -g -ggdb -std=gnu++17 -o CMakeFiles\\mysql_connecter.dir\\src\\other.cpp.obj -c \"D:\\OneDrive\\OneDrive - MSFT\\Codes_Qt\\mysql_connecter\\src\\other.cpp\"",
+  "file": "D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/src/other.cpp"
 }
 ]

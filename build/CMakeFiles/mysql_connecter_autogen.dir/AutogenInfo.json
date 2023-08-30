@@ -265,9 +265,15 @@
 			null
 		],
 		[
-			"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/include/test.h",
+			"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/include/new_sql_connect.h",
 			"MU",
-			"6YEA5652QU/moc_test.cpp",
+			"6YEA5652QU/moc_new_sql_connect.cpp",
+			null
+		],
+		[
+			"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/include/other.h",
+			"MU",
+			"6YEA5652QU/moc_other.cpp",
 			null
 		]
 	],
@@ -298,6 +304,7 @@
 	"MOC_INCLUDES" : 
 	[
 		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/include",
+		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build",
 		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/Module/mysql/include",
 		"D:/CppQt/6.2.4/mingw_64/include/QtCore",
 		"D:/CppQt/6.2.4/mingw_64/include",
@@ -324,7 +331,12 @@
 	],
 	"MOC_PREDEFS_FILE" : "D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/mysql_connecter_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
-	"MOC_SKIP" : [],
+	"MOC_SKIP" : 
+	[
+		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/ui_autogen/include/UI/ui_mainwindow.h",
+		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/ui_autogen/include/UI/ui_new_sql_connect.h",
+		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/ui_autogen/mocs_compilation.cpp"
+	],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 8,
 	"PARSE_CACHE_FILE" : "D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/CMakeFiles/mysql_connecter_autogen.dir/ParseCache.txt",
@@ -346,14 +358,24 @@
 			null
 		],
 		[
-			"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/src/test.cpp",
+			"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/src/new_sql_connect.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/src/other.cpp",
 			"MU",
 			null
 		]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [ "D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/UI" ],
-	"UIC_SKIP" : [],
+	"UIC_SKIP" : 
+	[
+		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/ui_autogen/include/UI/ui_mainwindow.h",
+		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/ui_autogen/include/UI/ui_new_sql_connect.h",
+		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/ui_autogen/mocs_compilation.cpp"
+	],
 	"UIC_UI_FILES" : [],
 	"VERBOSITY" : 0
 }

@@ -130,15 +130,15 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "CMakeFiles/sql_lib_autogen.dir/AutogenInfo.json"
+  "CMakeFiles/ui_autogen.dir/AutogenInfo.json"
   "CMakeFiles/mysql_connecter_autogen.dir/AutogenInfo.json"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/sql_lib.dir/DependInfo.cmake"
+  "CMakeFiles/ui.dir/DependInfo.cmake"
   "CMakeFiles/mysql_connecter.dir/DependInfo.cmake"
-  "CMakeFiles/sql_lib_autogen.dir/DependInfo.cmake"
+  "CMakeFiles/ui_autogen.dir/DependInfo.cmake"
   "CMakeFiles/mysql_connecter_autogen.dir/DependInfo.cmake"
   )

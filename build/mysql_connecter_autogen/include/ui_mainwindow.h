@@ -29,6 +29,7 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow
 {
 public:
+    QAction *act_new_connect;
     QWidget *centralwidget;
     QHBoxLayout *horizontalLayout;
     QTabWidget *tabWidget;
@@ -48,6 +49,8 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(800, 600);
+        act_new_connect = new QAction(MainWindow);
+        act_new_connect->setObjectName(QString::fromUtf8("act_new_connect"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         horizontalLayout = new QHBoxLayout(centralwidget);
@@ -66,7 +69,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 22));
+        menubar->setGeometry(QRect(0, 0, 800, 25));
         menu = new QMenu(menubar);
         menu->setObjectName(QString::fromUtf8("menu"));
         menu_2 = new QMenu(menubar);
@@ -91,6 +94,7 @@ public:
 
         menubar->addAction(menu->menuAction());
         menubar->addAction(menu_2->menuAction());
+        menu->addAction(act_new_connect);
 
         retranslateUi(MainWindow);
 
@@ -103,6 +107,10 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        act_new_connect->setText(QCoreApplication::translate("MainWindow", "\346\226\260\345\273\272\350\277\236\346\216\245", nullptr));
+#if QT_CONFIG(tooltip)
+        act_new_connect->setToolTip(QCoreApplication::translate("MainWindow", "\346\226\260\345\273\272MySQL\350\277\236\346\216\245", nullptr));
+#endif // QT_CONFIG(tooltip)
         tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("MainWindow", "Tab 1", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("MainWindow", "Tab 2", nullptr));
         menu->setTitle(QCoreApplication::translate("MainWindow", "\346\226\207\344\273\266", nullptr));
