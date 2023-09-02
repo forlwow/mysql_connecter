@@ -6,5 +6,7 @@ D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/CMakeFiles/list_insta
 D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/CMakeFiles/install.dir
 D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/CMakeFiles/install/local.dir
 D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/CMakeFiles/install/strip.dir
+D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/CMakeFiles/ui_autogen_timestamp_deps.dir
 D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/CMakeFiles/ui_autogen.dir
+D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/CMakeFiles/mysql_connecter_autogen_timestamp_deps.dir
 D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/CMakeFiles/mysql_connecter_autogen.dir

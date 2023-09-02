@@ -254,10 +254,22 @@
 		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeParseArguments.cmake"
 	],
 	"CMAKE_SOURCE_DIR" : "D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter",
-	"DEP_FILE" : "",
-	"DEP_FILE_RULE_NAME" : "",
+	"DEP_FILE" : "D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/mysql_connecter_autogen/deps",
+	"DEP_FILE_RULE_NAME" : "mysql_connecter_autogen/timestamp",
 	"HEADERS" : 
 	[
+		[
+			"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/include/connections_handler.h",
+			"MU",
+			"6YEA5652QU/moc_connections_handler.cpp",
+			null
+		],
+		[
+			"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/include/global.h",
+			"MU",
+			"6YEA5652QU/moc_global.cpp",
+			null
+		],
 		[
 			"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/include/mainwindow.h",
 			"MU",
@@ -265,15 +277,15 @@
 			null
 		],
 		[
-			"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/include/new_sql_connect.h",
-			"MU",
-			"6YEA5652QU/moc_new_sql_connect.cpp",
-			null
-		],
-		[
 			"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/include/other.h",
 			"MU",
 			"6YEA5652QU/moc_other.cpp",
+			null
+		],
+		[
+			"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/include/wd_create_sql_con.h",
+			"MU",
+			"6YEA5652QU/moc_wd_create_sql_con.cpp",
 			null
 		]
 	],
@@ -304,8 +316,8 @@
 	"MOC_INCLUDES" : 
 	[
 		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/include",
-		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build",
 		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/Module/mysql/include",
+		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/Module/nlohmann",
 		"D:/CppQt/6.2.4/mingw_64/include/QtCore",
 		"D:/CppQt/6.2.4/mingw_64/include",
 		"D:/CppQt/6.2.4/mingw_64/mkspecs/win32-g++",
@@ -323,7 +335,7 @@
 	"MOC_PATH_PREFIX" : false,
 	"MOC_PREDEFS_CMD" : 
 	[
-		"D:/Tiny/MinGW/mingw64/bin/g++.exe",
+		"D:/Tiny/MinGW/mingw64/bin/c++.exe",
 		"-dM",
 		"-E",
 		"-c",
@@ -334,7 +346,7 @@
 	"MOC_SKIP" : 
 	[
 		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/ui_autogen/include/UI/ui_mainwindow.h",
-		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/ui_autogen/include/UI/ui_new_sql_connect.h",
+		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/ui_autogen/include/UI/ui_wd_create_sql_con.h",
 		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/ui_autogen/mocs_compilation.cpp"
 	],
 	"MULTI_CONFIG" : false,
@@ -348,6 +360,11 @@
 	"SOURCES" : 
 	[
 		[
+			"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/src/connections_handler.cpp",
+			"MU",
+			null
+		],
+		[
 			"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/src/main.cpp",
 			"MU",
 			null
@@ -358,12 +375,12 @@
 			null
 		],
 		[
-			"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/src/new_sql_connect.cpp",
+			"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/src/other.cpp",
 			"MU",
 			null
 		],
 		[
-			"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/src/other.cpp",
+			"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/src/wd_create_sql_con.cpp",
 			"MU",
 			null
 		]
@@ -373,7 +390,7 @@
 	"UIC_SKIP" : 
 	[
 		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/ui_autogen/include/UI/ui_mainwindow.h",
-		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/ui_autogen/include/UI/ui_new_sql_connect.h",
+		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/ui_autogen/include/UI/ui_wd_create_sql_con.h",
 		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/ui_autogen/mocs_compilation.cpp"
 	],
 	"UIC_UI_FILES" : [],

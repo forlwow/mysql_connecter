@@ -1,2 +1,0 @@
-D:\Tiny\MinGW\mingw64\bin\ar.exe qc libsql.a CMakeFiles/sql.dir/sql_autogen/mocs_compilation.cpp.obj
-D:\Tiny\MinGW\mingw64\bin\ranlib.exe libsql.a

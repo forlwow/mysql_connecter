@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/mysql_connecter_autogen"
   "mysql_connecter_autogen/include/UI/ui_mainwindow.h"
-  "mysql_connecter_autogen/include/UI/ui_new_sql_connect.h"
+  "mysql_connecter_autogen/include/UI/ui_wd_create_sql_con.h"
   "mysql_connecter_autogen/mocs_compilation.cpp"
 )
 
