@@ -277,9 +277,15 @@
 			null
 		],
 		[
-			"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/include/other.h",
+			"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/include/other.hpp",
 			"MU",
 			"6YEA5652QU/moc_other.cpp",
+			null
+		],
+		[
+			"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/include/transfer.hpp",
+			"MU",
+			"6YEA5652QU/moc_transfer.cpp",
 			null
 		],
 		[
@@ -371,11 +377,6 @@
 		],
 		[
 			"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/src/mainwindow.cpp",
-			"MU",
-			null
-		],
-		[
-			"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/src/other.cpp",
 			"MU",
 			null
 		],

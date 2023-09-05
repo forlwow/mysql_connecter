@@ -1,5 +1,6 @@
 D:/OneDrive/OneDrive\ -\ MSFT/Codes_Qt/mysql_connecter/build/mysql_connecter_autogen/6YEA5652QU/moc_mainwindow.cpp: D:/OneDrive/OneDrive\ -\ MSFT/Codes_Qt/mysql_connecter/include/mainwindow.h \
   D:/OneDrive/OneDrive\ -\ MSFT/Codes_Qt/mysql_connecter/build/mysql_connecter_autogen/moc_predefs.h \
+  D:/CppQt/6.2.4/mingw_64/include/QtCore/QSet \
   D:/CppQt/6.2.4/mingw_64/include/QtCore/qalgorithms.h \
   D:/CppQt/6.2.4/mingw_64/include/QtCore/qanystringview.h \
   D:/CppQt/6.2.4/mingw_64/include/QtCore/qarraydata.h \
@@ -25,6 +26,7 @@ D:/OneDrive/OneDrive\ -\ MSFT/Codes_Qt/mysql_connecter/build/mysql_connecter_aut
   D:/CppQt/6.2.4/mingw_64/include/QtCore/qgenericatomic.h \
   D:/CppQt/6.2.4/mingw_64/include/QtCore/qglobal.h \
   D:/CppQt/6.2.4/mingw_64/include/QtCore/qglobalstatic.h \
+  D:/CppQt/6.2.4/mingw_64/include/QtCore/qhash.h \
   D:/CppQt/6.2.4/mingw_64/include/QtCore/qhashfunctions.h \
   D:/CppQt/6.2.4/mingw_64/include/QtCore/qiodevicebase.h \
   D:/CppQt/6.2.4/mingw_64/include/QtCore/qiterable.h \
@@ -49,6 +51,7 @@ D:/OneDrive/OneDrive\ -\ MSFT/Codes_Qt/mysql_connecter/build/mysql_connecter_aut
   D:/CppQt/6.2.4/mingw_64/include/QtCore/qrefcount.h \
   D:/CppQt/6.2.4/mingw_64/include/QtCore/qscopedpointer.h \
   D:/CppQt/6.2.4/mingw_64/include/QtCore/qscopeguard.h \
+  D:/CppQt/6.2.4/mingw_64/include/QtCore/qset.h \
   D:/CppQt/6.2.4/mingw_64/include/QtCore/qshareddata.h \
   D:/CppQt/6.2.4/mingw_64/include/QtCore/qsharedpointer.h \
   D:/CppQt/6.2.4/mingw_64/include/QtCore/qsharedpointer_impl.h \

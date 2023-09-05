@@ -12,7 +12,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/src/connections_handler.cpp" "CMakeFiles/mysql_connecter.dir/src/connections_handler.cpp.obj" "gcc" "CMakeFiles/mysql_connecter.dir/src/connections_handler.cpp.obj.d"
   "D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/src/main.cpp" "CMakeFiles/mysql_connecter.dir/src/main.cpp.obj" "gcc" "CMakeFiles/mysql_connecter.dir/src/main.cpp.obj.d"
   "D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/src/mainwindow.cpp" "CMakeFiles/mysql_connecter.dir/src/mainwindow.cpp.obj" "gcc" "CMakeFiles/mysql_connecter.dir/src/mainwindow.cpp.obj.d"
-  "D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/src/other.cpp" "CMakeFiles/mysql_connecter.dir/src/other.cpp.obj" "gcc" "CMakeFiles/mysql_connecter.dir/src/other.cpp.obj.d"
   "D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/src/wd_create_sql_con.cpp" "CMakeFiles/mysql_connecter.dir/src/wd_create_sql_con.cpp.obj" "gcc" "CMakeFiles/mysql_connecter.dir/src/wd_create_sql_con.cpp.obj.d"
   )
 

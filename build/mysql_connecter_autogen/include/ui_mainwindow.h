@@ -20,7 +20,7 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
-#include <QtWidgets/QTreeView>
+#include <QtWidgets/QTreeWidget>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -42,7 +42,7 @@ public:
     QDockWidget *dockWidget;
     QWidget *dockWidgetContents;
     QVBoxLayout *verticalLayout;
-    QTreeView *treeView;
+    QTreeWidget *interface_connections;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -69,7 +69,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 25));
+        menubar->setGeometry(QRect(0, 0, 800, 22));
         menu = new QMenu(menubar);
         menu->setObjectName(QString::fromUtf8("menu"));
         menu_2 = new QMenu(menubar);
@@ -84,10 +84,13 @@ public:
         dockWidgetContents->setObjectName(QString::fromUtf8("dockWidgetContents"));
         verticalLayout = new QVBoxLayout(dockWidgetContents);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        treeView = new QTreeView(dockWidgetContents);
-        treeView->setObjectName(QString::fromUtf8("treeView"));
+        interface_connections = new QTreeWidget(dockWidgetContents);
+        QTreeWidgetItem *__qtreewidgetitem = new QTreeWidgetItem();
+        __qtreewidgetitem->setText(0, QString::fromUtf8("1"));
+        interface_connections->setHeaderItem(__qtreewidgetitem);
+        interface_connections->setObjectName(QString::fromUtf8("interface_connections"));
 
-        verticalLayout->addWidget(treeView);
+        verticalLayout->addWidget(interface_connections);
 
         dockWidget->setWidget(dockWidgetContents);
         MainWindow->addDockWidget(Qt::LeftDockWidgetArea, dockWidget);
