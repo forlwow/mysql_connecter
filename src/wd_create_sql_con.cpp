@@ -2,10 +2,10 @@
 #include "ui_wd_create_sql_con.h"
 #include <QDebug>
 #include <QMessageBox>
-#include "mysql.h"
 #include "global.h"
 #include "connections_handler.h"
 #include "transfer.hpp"
+#include "mysql_handler.h"
 
 wd_create_sql_con::wd_create_sql_con(QWidget *parent) :
     QDialog(parent),
@@ -24,30 +24,17 @@ wd_create_sql_con::~wd_create_sql_con()
 
 bool wd_create_sql_con::on_btn_connect_clicked()
 {
-    MYSQL *sql_connect = mysql_init(nullptr);
+    QScopedPointer<sql_handler::sql_handler> test_con(new sql_handler::MySQL_Handler());
+    int con_res = test_con.get()->test_connect(get_data());
     bool res = false;
 
-    QStringList data = get_data();
-
-    MYSQL *con_res = mysql_real_connect(
-        sql_connect, 
-        transfer::qs2qb(data[CON_IP]).data(), 
-        transfer::qs2qb(data[CON_USER]).data(), 
-        transfer::qs2qb(data[CON_PASSWD]).data(), 
-        transfer::qs2qb(data[CON_DB_NAME]).data(), 
-        transfer::qs2uint(data[CON_PORT]), 
-        NULL, 
-        0
-    );
-
-    if (con_res){
+    if (con_res == 0){
         qDebug() << QString::fromLocal8Bit("连接成功");
         res = true;
     }
     else{
         qDebug() << QString::fromLocal8Bit("连接失败");
     }
-    mysql_close(sql_connect);
     return res;
 }
 

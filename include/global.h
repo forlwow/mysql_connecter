@@ -1,6 +1,8 @@
 #ifndef __GLOBAL_H_
 #define __GLOBAL_H_
 
+class QFont;
+
 enum sql_connect_data{
     CON_NAME = 0, 
     CON_DB_NAME,
@@ -9,6 +11,8 @@ enum sql_connect_data{
     CON_USER,
     CON_PASSWD
 };
+
+extern QFont glo_font;
 
 
 #endif

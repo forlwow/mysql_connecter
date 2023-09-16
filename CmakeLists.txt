@@ -40,7 +40,7 @@ find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/include)
-# INCLUDE_DIRECTORIES(${CMAKE_CURRENT_BINARY_DIR})   # 找不到生成的对应的ui_XXX.h头文件，可以尝试
+INCLUDE_DIRECTORIES(${CMAKE_CURRENT_BINARY_DIR})   # 找不到生成的对应的ui_XXX.h头文件，可以尝试
 # mysql模块
 INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/Module/mysql/include)
 file(GLOB_RECURSE sql_inc "${PROJECT_SOURCE_DIR}/Module/mysql/include/*.h")
@@ -50,6 +50,7 @@ file(GLOB sql_required
     ${PROJECT_SOURCE_DIR}/Module/mysql/lib/libssl-1_1-x64.dll 
     ${PROJECT_SOURCE_DIR}/Module/mysql/lib/libcrypto-1_1-x64.dll
 )
+
 # JSON
 INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/Module/nlohmann)
 
@@ -80,8 +81,9 @@ qt_add_executable(${PROJECT_NAME}
     ${PROJECT_SOURCES}
 )
 
-target_link_directories(${PROJECT_NAME} PRIVATE ${PROJECT_SOURCE_DIR}/Module/mysql/lib)
 target_link_libraries(${PROJECT_NAME} PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+# MySQL
+target_link_directories(${PROJECT_NAME} PRIVATE ${PROJECT_SOURCE_DIR}/Module/mysql/lib)
 target_link_libraries(${PROJECT_NAME} PRIVATE libmysql libssl-1_1-x64 libcrypto-1_1-x64) 
 
 set_target_properties(${PROJECT_NAME} PROPERTIES

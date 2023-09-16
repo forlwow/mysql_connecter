@@ -29,6 +29,8 @@ public:
 
     void init_tree_widget();
 
+    void new_tab();
+
 private slots:
     void on_act_new_connect_triggered();
 
