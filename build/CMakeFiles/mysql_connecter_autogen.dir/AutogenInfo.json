@@ -7,8 +7,58 @@
 	"CMAKE_LIST_FILES" : 
 	[
 		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/CMakeLists.txt",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeDetermineSystem.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeSystem.cmake.in",
 		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/CMakeFiles/3.24.2/CMakeSystem.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeNinjaFindMake.cmake",
 		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeDetermineCXXCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeDetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Platform/Windows-Determine-CXX.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeDetermineCompilerId.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeCompilerIdDetection.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/ADSP-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/ARMCC-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/ARMClang-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/AppleClang-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompilerInternal.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/Borland-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompilerInternal.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/Cray-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/Embarcadero-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/Fujitsu-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/GHS-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/HP-CXX-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/IAR-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/Intel-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/MSVC-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/NVHPC-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/NVIDIA-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/PGI-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/PathScale-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/SCO-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/TI-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/Watcom-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/XL-CXX-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeFindBinUtils.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/GNU-FindBinUtils.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeCXXCompiler.cmake.in",
 		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/CMakeFiles/3.24.2/CMakeCXXCompiler.cmake",
 		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake",
 		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeGenericSystem.cmake",
@@ -22,11 +72,26 @@
 		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake",
 		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Platform/Windows-GNU-CXX.cmake",
 		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Platform/Windows-GNU.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeDetermineRCCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeRCCompiler.cmake.in",
 		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/CMakeFiles/3.24.2/CMakeRCCompiler.cmake",
 		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeRCInformation.cmake",
 		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Platform/Windows-windres.cmake",
-		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Platform/Windows-GNU-CXX-ABI.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeTestRCCompiler.cmake",
 		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeTestCXXCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeTestCompilerCommon.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeDetermineCompilerABI.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeParseImplicitIncludeInfo.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeParseImplicitLinkInfo.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeParseLibraryArchitecture.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeTestCompilerCommon.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeDetermineCompileFeatures.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Internal/FeatureTesting.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeCXXCompiler.cmake.in",
+		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/CMakeFiles/3.24.2/CMakeCXXCompiler.cmake",
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/Platform/Windows-GNU-CXX-ABI.cmake",
 		"D:/CppQt/6.2.4/mingw_64/lib/cmake/Qt6/Qt6ConfigVersion.cmake",
 		"D:/CppQt/6.2.4/mingw_64/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake",
 		"D:/CppQt/6.2.4/mingw_64/lib/cmake/Qt6/Qt6Config.cmake",
@@ -251,7 +316,8 @@
 		"D:/CppQt/6.2.4/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake",
 		"D:/CppQt/6.2.4/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsVersionlessTargets.cmake",
 		"D:/CppQt/6.2.4/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake",
-		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeParseArguments.cmake"
+		"D:/CppQt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeParseArguments.cmake",
+		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/res/icon.qrc"
 	],
 	"CMAKE_SOURCE_DIR" : "D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter",
 	"DEP_FILE" : "D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/mysql_connecter_autogen/deps",
@@ -301,15 +367,21 @@
 			null
 		],
 		[
-			"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/include/wd_create_sql_con.h",
+			"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/include/wd_cell.h",
 			"MU",
-			"6YEA5652QU/moc_wd_create_sql_con.cpp",
+			"6YEA5652QU/moc_wd_cell.cpp",
 			null
 		],
 		[
-			"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/include/wd_sql_result.h",
+			"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/include/wd_cell_sql.h",
 			"MU",
-			"6YEA5652QU/moc_wd_sql_result.cpp",
+			"6YEA5652QU/moc_wd_cell_sql.cpp",
+			null
+		],
+		[
+			"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/include/wd_create_sql_con.h",
+			"MU",
+			"6YEA5652QU/moc_wd_create_sql_con.cpp",
 			null
 		]
 	],
@@ -370,9 +442,10 @@
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : 
 	[
+		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/qrc_icon.cpp",
 		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/ui_autogen/include/UI/ui_mainwindow.h",
+		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/ui_autogen/include/UI/ui_wd_cell.h",
 		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/ui_autogen/include/UI/ui_wd_create_sql_con.h",
-		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/ui_autogen/include/UI/ui_wd_sql_result.h",
 		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/ui_autogen/mocs_compilation.cpp"
 	],
 	"MULTI_CONFIG" : false,
@@ -411,12 +484,17 @@
 			null
 		],
 		[
-			"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/src/wd_create_sql_con.cpp",
+			"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/src/wd_cell.cpp",
 			"MU",
 			null
 		],
 		[
-			"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/src/wd_sql_result.cpp",
+			"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/src/wd_cell_sql.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/src/wd_create_sql_con.cpp",
 			"MU",
 			null
 		]
@@ -425,9 +503,10 @@
 	"UIC_SEARCH_PATHS" : [ "D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/UI" ],
 	"UIC_SKIP" : 
 	[
+		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/qrc_icon.cpp",
 		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/ui_autogen/include/UI/ui_mainwindow.h",
+		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/ui_autogen/include/UI/ui_wd_cell.h",
 		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/ui_autogen/include/UI/ui_wd_create_sql_con.h",
-		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/ui_autogen/include/UI/ui_wd_sql_result.h",
 		"D:/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/build/ui_autogen/mocs_compilation.cpp"
 	],
 	"UIC_UI_FILES" : [],

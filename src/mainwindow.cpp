@@ -4,11 +4,11 @@
 #include "transfer.hpp"
 #include "wd_create_sql_con.h"
 #include "connections_handler.h"
-#include "wd_sql_result.h"
+#include "wd_cell_sql.h"
 #include <QDebug>
 #include <QSet>
 #include <QMessageBox>
-#include <QSplitter>
+#include <QSplitter>                                                
 #include <QScrollArea>
 #include <QSizePolicy>
 #include <QVBoxLayout>
@@ -33,6 +33,9 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->tabWidget->clear();
     new_tab();
+    // TODO 测试transfer::get_mysql_connection
+    //      测试mysql_handler.query
+
 }
 
 MainWindow::~MainWindow()
@@ -68,19 +71,18 @@ void MainWindow::update_connections_interface(){
     for (int index = ui->interface_connections->topLevelItemCount() - 1; index >= 0 ; --index){
         QTreeWidgetItem *item =  ui->interface_connections->topLevelItem(index);
         if (cur_con.contains(item->text(0))){
-            cur_con.remove(item->text(0));
             qDebug() << "contain item:" << item->text(0);
+            cur_con.remove(item->text(0));
         }
         else{
-            delete ui->interface_connections->topLevelItem(index);
             qDebug() << "delete item:" << item->text(0);
+            delete ui->interface_connections->topLevelItem(index);
         }  
     }
     // 添加新内容
     for (const QString &name : cur_con){
         QTreeWidgetItem *tmp = new QTreeWidgetItem(ui->interface_connections);
-        tmp->setText(0, name.toLocal8Bit());
-        qDebug() << "add item:" << name;
+        tmp->setText(0, name.toLocal8Bit()); // 如果不转会乱码
     }
 }
 
@@ -91,24 +93,70 @@ void MainWindow::init_tree_widget(){
     ui->interface_connections->header()->setHidden(true);
 }
 
+// 新建一个tab
 void MainWindow::new_tab(){
-    wd_sql_result *sql_res = new wd_sql_result();
-    wd_sql_result *sql_res2 = new wd_sql_result();
+    // QScrollArea => QWidget => QVBoxLayout => wd_sql_result
+    wd_cell *sql_res = create_cell();
+    sql_res->setObjectName("1");
+    wd_cell *sql_res2 = create_cell();
+    sql_res2->setObjectName("2");
 
     QScrollArea *scol = new QScrollArea();
+    scol->setObjectName("QScrollArea");
     QWidget *scol_content = new QWidget();
+    scol_content->setObjectName("QScrollAreaContent");
     scol_content->resize(500, 1000);
     scol->setWidget(scol_content);
 
-    QSpacerItem *space = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding); 
+    QWidget *space = new QWidget();
+    space->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    space->setObjectName("space");
 
     QVBoxLayout *vlayout = new QVBoxLayout();
+    vlayout->setObjectName("QVBoxLayout");
     vlayout->addWidget(sql_res);
     vlayout->setStretchFactor(sql_res, 1);
-    vlayout->addItem(space);
-    vlayout->setStretch(1, 100);
+    vlayout->addWidget(sql_res2);
+    vlayout->setStretchFactor(sql_res2, 1);
+    vlayout->addWidget(space);
+    vlayout->setStretchFactor(space, INT16_MAX);
 
     scol_content->setLayout(vlayout);
-    ui->tabWidget->addTab(scol, "test");
+    ui->tabWidget->addTab(scol, "new tab");
+}
 
+void MainWindow::on_act_test_triggered()
+{
+    int index = ui->tabWidget->currentIndex();
+    QWidget *page = ui->tabWidget->widget(index);
+    auto scroll = qobject_cast<QScrollArea*>(page);
+    qDebug() << scroll->widget()->size();
+}
+
+void MainWindow::on_act_cell_height_changed(int changed_height){
+    if (!changed_height) return;
+    // 获取来源查询单元
+    auto *obj = sender();
+    if (!obj) {
+        qDebug() << obj;
+        return;
+    }
+    // 获取其widget画布
+    obj = obj->parent();
+    if (!obj) {
+        qDebug() << "No Parent";
+        return;
+    }
+    QWidget *scrol_contenter = qobject_cast<QWidget*>(obj);
+    if (!scrol_contenter) {
+        qDebug() << "convert to widget failed" << scrol_contenter;
+        return;
+    }
+    scrol_contenter->setFixedHeight(scrol_contenter->size().height() + changed_height);
+}
+
+wd_cell *MainWindow::create_cell(){
+    wd_cell *res = new wd_cell_sql();
+    connect(res, &wd_cell::editor_changed, this, on_act_cell_height_changed);
+    return res;
 }

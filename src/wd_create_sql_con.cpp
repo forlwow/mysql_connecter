@@ -24,8 +24,7 @@ wd_create_sql_con::~wd_create_sql_con()
 
 bool wd_create_sql_con::on_btn_connect_clicked()
 {
-    QScopedPointer<sql_handler::sql_handler> test_con(new sql_handler::MySQL_Handler());
-    int con_res = test_con.get()->test_connect(get_data());
+    int con_res = sql_handler::MySQL_Handler::test_connect(get_data());
     bool res = false;
 
     if (con_res == 0){

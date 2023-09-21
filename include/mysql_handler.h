@@ -3,7 +3,7 @@
 
 #include "sql_handler.h"
 #include "mysql.h"
-#include "QScopedPointer"
+#include <QScopedPointer>
 
 namespace sql_handler{
 
@@ -19,7 +19,7 @@ struct mysql_connection_deleter{      //自定义的cleanup handler
     }
  };
 
-class MySQL_Handler: public sql_handler{
+class MySQL_Handler: public sql_handler_inner{
 public:
     MySQL_Handler();
 
@@ -27,9 +27,11 @@ public:
 
     int connect(const QList<QString> &data) override;
 
-    int test_connect(const QList<QString> &data) override;
+    static int test_connect(const QList<QString> &data);
 
     QStandardItemModel* query(const QString &data) override;
+
+    bool is_connected() override;
 
 protected:
     static MYSQL *tester;

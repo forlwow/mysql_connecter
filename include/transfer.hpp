@@ -8,12 +8,16 @@
 #include <string>
 #include <unordered_set>
 
+#include "connections_handler.h"
+#include "mysql_handler.h"
+
 namespace transfer
 {
 
 using std::vector;
 using std::string;
 using std::unordered_set;
+
 
 // QStringList => vector<string>
 inline vector<string> qslist2stdsvector(const QStringList data){
@@ -80,6 +84,23 @@ inline QString chars2qs(const char* data){
 
 inline unsigned int qs2uint(const QString &data){
     return data.toLocal8Bit().toUInt();
+}
+
+inline sql_handler::sql_handler<sql_handler::MySQL_Handler> get_mysql_connection(const QString &name){
+    sql_handler::sql_handler<sql_handler::MySQL_Handler> res;
+    res.create_new_sql();
+    if (res.isNull()) return {};
+    // 使用qs2qb防止乱码
+    QStringList con_data = stdsvector2qslist(con_handler::get_con_data(qs2qb(name).data()));
+
+    res.connect(con_data);
+    if (res.is_connected())
+    {
+        return res;
+    }
+    else{
+        return {};
+    }
 }
 
 } // namespace transfer

@@ -30,6 +30,7 @@ class Ui_MainWindow
 {
 public:
     QAction *act_new_connect;
+    QAction *act_test;
     QWidget *centralwidget;
     QHBoxLayout *horizontalLayout;
     QTabWidget *tabWidget;
@@ -51,6 +52,8 @@ public:
         MainWindow->resize(800, 600);
         act_new_connect = new QAction(MainWindow);
         act_new_connect->setObjectName(QString::fromUtf8("act_new_connect"));
+        act_test = new QAction(MainWindow);
+        act_test->setObjectName(QString::fromUtf8("act_test"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         horizontalLayout = new QHBoxLayout(centralwidget);
@@ -100,6 +103,7 @@ public:
         menubar->addAction(menu->menuAction());
         menubar->addAction(menu_2->menuAction());
         menu->addAction(act_new_connect);
+        menu_2->addAction(act_test);
 
         retranslateUi(MainWindow);
 
@@ -116,6 +120,7 @@ public:
 #if QT_CONFIG(tooltip)
         act_new_connect->setToolTip(QCoreApplication::translate("MainWindow", "\346\226\260\345\273\272MySQL\350\277\236\346\216\245", nullptr));
 #endif // QT_CONFIG(tooltip)
+        act_test->setText(QCoreApplication::translate("MainWindow", "\346\265\213\350\257\225", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("MainWindow", "Tab 1", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("MainWindow", "Tab 2", nullptr));
         menu->setTitle(QCoreApplication::translate("MainWindow", "\346\226\207\344\273\266", nullptr));

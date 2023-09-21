@@ -59,6 +59,7 @@
     <property name="title">
      <string>编辑</string>
     </property>
+    <addaction name="act_test"/>
    </widget>
    <addaction name="menu"/>
    <addaction name="menu_2"/>
@@ -88,6 +89,11 @@
    </property>
    <property name="toolTip">
     <string>新建MySQL连接</string>
+   </property>
+  </action>
+  <action name="act_test">
+   <property name="text">
+    <string>测试</string>
    </property>
   </action>
  </widget>

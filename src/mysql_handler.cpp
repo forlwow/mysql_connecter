@@ -6,7 +6,7 @@ using sql_handler::MySQL_Handler;
 
 MYSQL *MySQL_Handler::tester = mysql_init(nullptr);
 
-MySQL_Handler::MySQL_Handler(): sql_handler() {
+MySQL_Handler::MySQL_Handler(): sql_handler_inner() {
     mysql_connection.reset(mysql_init(nullptr));
 }
 
@@ -90,4 +90,9 @@ QStandardItemModel* MySQL_Handler::query(const QString &data){
         }
     }
     return model;
+}
+
+bool MySQL_Handler::is_connected(){
+    if (mysql_connection.get()) return true;
+    else return false;
 }

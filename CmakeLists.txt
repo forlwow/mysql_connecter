@@ -18,6 +18,8 @@ SET(EXECUTABLE_OUTPUT_PATH "${PROJECT_SOURCE_DIR}/bin")
 SET(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/bin")
 SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/bin")
 
+set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
+
 find_program(CCACHE_PROGRAM ccache)
 if(CCACHE_PROGRAM)
   message(STATUS "Set up ccache ...")
@@ -61,14 +63,16 @@ FILE(GLOB INC "include/*.h")
 FILE(GLOB HPP_INC "include/*.hpp")
 FILE(GLOB res_files "res/*.qrc")
 
-qt_add_resources(QRC_FILES ${res_files})
 
 SOURCE_GROUP("UI FILES" FILES ${UI_files})
 SOURCE_GROUP("INCLUDE FILES" FILES ${INC})
 SOURCE_GROUP("SRC FILES" FILES ${src_files})
 SOURCE_GROUP("Resource FILES" FILES ${res_files})
 
+qt_add_resources(QRC_FILES ${res_files})
+
 add_library(ui ${UI_files})
+#add_library(resources ${QRC_FILES})
 
 set(PROJECT_SOURCES
     ${src_files}
