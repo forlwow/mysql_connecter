@@ -4,3 +4,5 @@
 /build
 *.exe
 *.vsdx
+.gdbinit
+/.gdb

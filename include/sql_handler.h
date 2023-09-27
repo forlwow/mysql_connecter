@@ -1,5 +1,5 @@
-#ifndef __SQL_HANDLER_H_
-#define __SQL_HANDLER_H_
+#ifndef SQL_HANDLER_H_
+#define SQL_HANDLER_H_
 
 #include <QString>
 #include <QStandardItemModel>
@@ -13,7 +13,7 @@ public:
     sql_handler_inner() = default;
     virtual ~sql_handler_inner() = default;
 
-    virtual QStandardItemModel* query(const QString &data) = 0;
+    virtual void query(QStandardItemModel *model, const QString &data) = 0;
 
     virtual bool is_connected() = 0;
 
@@ -28,7 +28,7 @@ protected:
 public:
     sql_handler() :ptr_sql_handler() {}
 
-    ~sql_handler() {}
+    ~sql_handler() = default;
 
     void create_new_sql(){
         ptr_sql_handler.reset(new T);
@@ -42,8 +42,8 @@ public:
         return ptr_sql_handler.get();
     }
 
-    QStandardItemModel* query(const QString &data){
-        return ptr_sql_handler.get()->query(data);
+    void query(QStandardItemModel *model, const QString &data){
+        return ptr_sql_handler.get()->query(model, data);
     }
 
     int connect(const QList<QString> &data){

@@ -1,5 +1,10 @@
-#ifndef __GLOBAL_H_
-#define __GLOBAL_H_
+#ifndef GLOBAL_H_
+#define GLOBAL_H_
+
+#include "boost/locale.hpp"
+#include "string"
+
+using std::string;
 
 class QFont;
 

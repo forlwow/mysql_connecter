@@ -1,6 +1,7 @@
 #include "connections_handler.h"
 #include "json.hpp"
 #include "global.h"
+#include "transfer.hpp"
 #include <fstream>
 #include <filesystem>
 
@@ -48,18 +49,26 @@ int con_handler::save_con_data(const vector<string> &data){
 vector<string> con_handler::get_con_data(const string &name){
     json data;
     vector<string> res;
-    ifstream input_file(string("./connections/") + name + ".json");
-    if (!input_file.is_open()) return vector<string>();
-    if (data << input_file){
-        res.push_back(string(name));
+    string file_name = string("./connections/") + name + ".json";
+    string locale_name = transfer::utf2locale(file_name);
+    ifstream input_file(locale_name);
+    if (!input_file.is_open()) return {};
+    try {
+        input_file >> data;
+        res.emplace_back(name);
         res.push_back(data["db_name"]);
         res.push_back(data["ip"]);
         res.push_back(data["port"]);
         res.push_back(data["user"]);
         res.push_back(data["passwd"]);
+        input_file.close();
         return res;
     }
-    else return vector<string>();
+    catch (nlohmann::json::parse_error &e){
+        input_file.close();
+        std::cout << e.what() << std::endl;
+    }
+    return {};
 
 }
 

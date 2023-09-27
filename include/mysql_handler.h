@@ -1,5 +1,5 @@
-#ifndef __MYSQL_HANDLER_H_
-#define __MYSQL_HANDLER_H_
+#ifndef MYSQL_HANDLER_H_
+#define MYSQL_HANDLER_H_
 
 #include "sql_handler.h"
 #include "mysql.h"
@@ -9,7 +9,9 @@ namespace sql_handler{
 
 struct mysql_connection_deleter{      //自定义的cleanup handler
      static inline void cleanup(MYSQL *pointer){   //需要包含一个cleanup(T *)p)的函数
-         mysql_close(pointer);
+         if (pointer) {
+             mysql_close(pointer);
+         }
      }
  };
 
@@ -29,15 +31,15 @@ public:
 
     static int test_connect(const QList<QString> &data);
 
-    QStandardItemModel* query(const QString &data) override;
+    void query(QStandardItemModel *model, const QString &data) override;
 
     bool is_connected() override;
 
 protected:
     static MYSQL *tester;
 
-    QScopedPointer<MYSQL, mysql_connection_deleter> mysql_connection;
-    
+    QScopedPointer<MYSQL, mysql_connection_deleter> mysql_connection; // 实际的连接
+
     QScopedPointer<MYSQL_RES, mysql_result_deleter> result;
 };
 

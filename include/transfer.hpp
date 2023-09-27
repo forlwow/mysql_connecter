@@ -10,6 +10,7 @@
 
 #include "connections_handler.h"
 #include "mysql_handler.h"
+#include "boost/locale.hpp"
 
 namespace transfer
 {
@@ -18,18 +19,23 @@ using std::vector;
 using std::string;
 using std::unordered_set;
 
+// UTF-8 String => Unicode String
+inline string utf2locale(const string &data){
+    auto locale_string = QString::fromUtf8(data).toLocal8Bit();
+    return locale_string.toStdString();
+}
 
 // QStringList => vector<string>
-inline vector<string> qslist2stdsvector(const QStringList data){
+inline vector<string> qslist2stdsvector(const QStringList &data){
     vector<string> res;
     for (auto &i : data){
-        res.push_back(string(i.toLocal8Bit()));
+        res.emplace_back(i.toLocal8Bit());
     }
     return res;
 }
 
 // vector<string> => QStringList
-inline QStringList stdsvector2qslist(const vector<string> data){
+inline QStringList stdsvector2qslist(const vector<string> &data){
     QStringList res;
     for (auto &i : data){
         res.push_back(QString::fromLocal8Bit(i.data()));
@@ -38,7 +44,7 @@ inline QStringList stdsvector2qslist(const vector<string> data){
 }
 
 // QSet<QString> => unordered_set<string>
-inline unordered_set<string> qset2stdset(const QSet<QString> data){
+inline unordered_set<string> qset2stdset(const QSet<QString> &data){
     unordered_set<string> res;
     for (const QString &i : data){
         res.insert(string(i.toLocal8Bit()));
@@ -47,7 +53,7 @@ inline unordered_set<string> qset2stdset(const QSet<QString> data){
 }
 
 // unordered_set<string> => QSet<QString>
-inline QSet<QString> stdset2qset(const unordered_set<string> data){
+inline QSet<QString> stdset2qset(const unordered_set<string> &data){
     QSet<QString> res;
     for (const string &i : data){
         res.insert(QString::fromLocal8Bit(i.data()));
@@ -92,7 +98,7 @@ inline sql_handler::sql_handler<sql_handler::MySQL_Handler> get_mysql_connection
     if (res.isNull()) return {};
     // 使用qs2qb防止乱码
     QStringList con_data = stdsvector2qslist(con_handler::get_con_data(qs2qb(name).data()));
-
+    if (con_data.size() != con_handler::CON_DATA_SIZE) return {};
     res.connect(con_data);
     if (res.is_connected())
     {

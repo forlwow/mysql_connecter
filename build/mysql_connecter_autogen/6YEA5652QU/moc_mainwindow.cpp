@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    const uint offsetsAndSize[12];
-    char stringdata0[105];
+    const uint offsetsAndSize[16];
+    char stringdata0[135];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(offsetof(qt_meta_stringdata_MainWindow_t, stringdata0) + ofs), len 
@@ -33,13 +33,16 @@ QT_MOC_LITERAL(0, 10), // "MainWindow"
 QT_MOC_LITERAL(11, 28), // "on_act_new_connect_triggered"
 QT_MOC_LITERAL(40, 0), // ""
 QT_MOC_LITERAL(41, 21), // "on_act_test_triggered"
-QT_MOC_LITERAL(63, 26), // "on_act_cell_height_changed"
-QT_MOC_LITERAL(90, 14) // "changed_height"
+QT_MOC_LITERAL(63, 42), // "on_interface_connections_item..."
+QT_MOC_LITERAL(106, 16), // "QTreeWidgetItem*"
+QT_MOC_LITERAL(123, 4), // "item"
+QT_MOC_LITERAL(128, 6) // "column"
 
     },
     "MainWindow\0on_act_new_connect_triggered\0"
     "\0on_act_test_triggered\0"
-    "on_act_cell_height_changed\0changed_height"
+    "on_interface_connections_itemDoubleClicked\0"
+    "QTreeWidgetItem*\0item\0column"
 };
 #undef QT_MOC_LITERAL
 
@@ -59,12 +62,12 @@ static const uint qt_meta_data_MainWindow[] = {
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
        1,    0,   32,    2, 0x08,    1 /* Private */,
        3,    0,   33,    2, 0x08,    2 /* Private */,
-       4,    1,   34,    2, 0x08,    3 /* Private */,
+       4,    2,   34,    2, 0x08,    3 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,    5,
+    QMetaType::Void, 0x80000000 | 5, QMetaType::Int,    6,    7,
 
        0        // eod
 };
@@ -77,7 +80,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         switch (_id) {
         case 0: _t->on_act_new_connect_triggered(); break;
         case 1: _t->on_act_test_triggered(); break;
-        case 2: _t->on_act_cell_height_changed((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 2: _t->on_interface_connections_itemDoubleClicked((*reinterpret_cast< std::add_pointer_t<QTreeWidgetItem*>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
         default: ;
         }
     }
@@ -91,7 +94,7 @@ const QMetaObject MainWindow::staticMetaObject = { {
     nullptr,
 qt_incomplete_metaTypeArray<qt_meta_stringdata_MainWindow_t
 , QtPrivate::TypeAndForceComplete<MainWindow, std::true_type>
-, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>
+, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QTreeWidgetItem *, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>
 
 
 >,

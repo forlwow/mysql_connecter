@@ -3,6 +3,9 @@
 
 #include <QMainWindow>
 #include <QSet>
+#include <QMap>
+#include <mysql_handler.h>
+#include "wd_show_table.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -10,6 +13,7 @@ QT_END_NAMESPACE
 
 class wd_create_sql_con;
 class wd_cell;
+class QTreeWidgetItem;
 
 class MainWindow : public QMainWindow
 {
@@ -17,13 +21,20 @@ class MainWindow : public QMainWindow
 
 public:
     MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+    ~MainWindow() override;
 
 public:
+    enum DataColnumn{RealData = Qt::UserRole + 1};
+
     wd_create_sql_con *sql_con; // 新建连接的窗口
     QSet<QString> all_connections; // 所有保存的连接
+    QMap<QString, sql_handler::sql_handler<sql_handler::MySQL_Handler>> current_connections; // 已经连接的连接
 
 public:
+    int new_sql_server(const QString &name);
+
+    void del_sql_server(const QString &name);
+
     void set_all_connections(); // 从json文件读入所有保存连接
 
     void update_connections_interface(); // 更新左侧连接界面
@@ -32,14 +43,12 @@ public:
 
     void new_tab(); // 新建一个tab
 
-    wd_cell *create_cell(); // 新建一个单元格
-
 private slots:
     void on_act_new_connect_triggered(); // 点击新建连接按钮
 
     void on_act_test_triggered();   // 测试按钮
 
-    void on_act_cell_height_changed(int changed_height); //当单元格高度变化时的导入的槽
+    void on_interface_connections_itemDoubleClicked(QTreeWidgetItem *item, int column);
 
 private:
     Ui::MainWindow *ui;

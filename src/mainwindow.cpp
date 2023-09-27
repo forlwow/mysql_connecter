@@ -1,20 +1,17 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include "other.hpp"
+#include "global.h"
 #include "transfer.hpp"
 #include "wd_create_sql_con.h"
 #include "connections_handler.h"
 #include "wd_cell_sql.h"
 #include <QDebug>
 #include <QSet>
-#include <QMessageBox>
-#include <QSplitter>                                                
 #include <QScrollArea>
 #include <QSizePolicy>
 #include <QVBoxLayout>
-#include <QHBoxLayout>
-#include <QSpacerItem>
-
+#include "wd_tab_page.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -29,13 +26,10 @@ MainWindow::MainWindow(QWidget *parent)
     // 初始化树形连接
     init_tree_widget();
     update_connections_interface();
-    qDebug() << "MainWindow init complete";
 
     ui->tabWidget->clear();
     new_tab();
-    // TODO 测试transfer::get_mysql_connection
-    //      测试mysql_handler.query
-
+    qDebug() << "MainWindow init complete";
 }
 
 MainWindow::~MainWindow()
@@ -83,10 +77,11 @@ void MainWindow::update_connections_interface(){
     for (const QString &name : cur_con){
         QTreeWidgetItem *tmp = new QTreeWidgetItem(ui->interface_connections);
         tmp->setText(0, name.toLocal8Bit()); // 如果不转会乱码
+        tmp->setData(RealData, 0, name);
     }
 }
 
-// 初始化右侧树形图
+// 初始化左侧树形图
 void MainWindow::init_tree_widget(){
     ui->interface_connections->clear();
     ui->interface_connections->setColumnCount(1);
@@ -95,68 +90,53 @@ void MainWindow::init_tree_widget(){
 
 // 新建一个tab
 void MainWindow::new_tab(){
-    // QScrollArea => QWidget => QVBoxLayout => wd_sql_result
-    wd_cell *sql_res = create_cell();
-    sql_res->setObjectName("1");
-    wd_cell *sql_res2 = create_cell();
-    sql_res2->setObjectName("2");
-
-    QScrollArea *scol = new QScrollArea();
-    scol->setObjectName("QScrollArea");
-    QWidget *scol_content = new QWidget();
-    scol_content->setObjectName("QScrollAreaContent");
-    scol_content->resize(500, 1000);
-    scol->setWidget(scol_content);
-
-    QWidget *space = new QWidget();
-    space->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-    space->setObjectName("space");
-
-    QVBoxLayout *vlayout = new QVBoxLayout();
-    vlayout->setObjectName("QVBoxLayout");
-    vlayout->addWidget(sql_res);
-    vlayout->setStretchFactor(sql_res, 1);
-    vlayout->addWidget(sql_res2);
-    vlayout->setStretchFactor(sql_res2, 1);
-    vlayout->addWidget(space);
-    vlayout->setStretchFactor(space, INT16_MAX);
-
-    scol_content->setLayout(vlayout);
-    ui->tabWidget->addTab(scol, "new tab");
+    auto page = new wd_tab_page;
+    ui->tabWidget->addTab(page, "p2");
 }
 
 void MainWindow::on_act_test_triggered()
 {
-    int index = ui->tabWidget->currentIndex();
-    QWidget *page = ui->tabWidget->widget(index);
-    auto scroll = qobject_cast<QScrollArea*>(page);
-    qDebug() << scroll->widget()->size();
+    auto cell = ui->tabWidget->currentWidget()->findChild<wd_cell_sql*>("cell");
+    if (cell){
+        cell->set_sql_tool(current_connections["tests"]);
+    }
 }
 
-void MainWindow::on_act_cell_height_changed(int changed_height){
-    if (!changed_height) return;
-    // 获取来源查询单元
-    auto *obj = sender();
-    if (!obj) {
-        qDebug() << obj;
-        return;
+int MainWindow::new_sql_server(const QString &name) {
+    if (current_connections.count(name)) return 1;
+    auto tmp = transfer::get_mysql_connection(name);
+    if (!tmp.isNull() && tmp.is_connected()){
+        current_connections[name] = tmp;
+        return 0;
     }
-    // 获取其widget画布
-    obj = obj->parent();
-    if (!obj) {
-        qDebug() << "No Parent";
-        return;
+    else {
+        return 2;
     }
-    QWidget *scrol_contenter = qobject_cast<QWidget*>(obj);
-    if (!scrol_contenter) {
-        qDebug() << "convert to widget failed" << scrol_contenter;
-        return;
-    }
-    scrol_contenter->setFixedHeight(scrol_contenter->size().height() + changed_height);
 }
 
-wd_cell *MainWindow::create_cell(){
-    wd_cell *res = new wd_cell_sql();
-    connect(res, &wd_cell::editor_changed, this, on_act_cell_height_changed);
-    return res;
+void MainWindow::del_sql_server(const QString &name) {
+    if (current_connections.contains(name))
+        current_connections.remove(name);
 }
+
+void MainWindow::on_interface_connections_itemDoubleClicked(QTreeWidgetItem *item, int column)
+{
+    int index = ui->interface_connections->indexOfTopLevelItem(item);
+    QString i = ui->interface_connections->topLevelItem(index)->data(RealData, 0).toString();
+    qDebug() << i;
+    int res = new_sql_server(i);
+    switch (res) {
+        case 0:
+            qDebug() << "new_sql_server";
+            break;
+        case 1:
+            qDebug() << "already new_sql_server";
+            break;
+        case 2:
+            qDebug() << "error new_sql_server";
+            break;
+        default:
+            break;
+    }
+}
+
