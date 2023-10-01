@@ -15,7 +15,8 @@
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+    , ui(new Ui::MainWindow),
+    combobox_model(new QStringListModel())
 {
     ui->setupUi(this);
 
@@ -26,6 +27,9 @@ MainWindow::MainWindow(QWidget *parent)
     // 初始化树形连接
     init_tree_widget();
     update_connections_interface();
+
+    // 显示在combobox的内容
+    combobox_model->setStringList(QStringList(""));
 
     ui->tabWidget->clear();
     new_tab();
@@ -90,15 +94,23 @@ void MainWindow::init_tree_widget(){
 
 // 新建一个tab
 void MainWindow::new_tab(){
-    auto page = new wd_tab_page;
+    auto page = new wd_tab_page(nullptr, combobox_model, &current_connections);
     ui->tabWidget->addTab(page, "p2");
 }
 
 void MainWindow::on_act_test_triggered()
 {
-    auto cell = ui->tabWidget->currentWidget()->findChild<wd_cell_sql*>("cell");
-    if (cell){
-        cell->set_sql_tool(current_connections["tests"]);
+    auto i = current_connections["tests"];
+    qDebug() << "";
+}
+
+void MainWindow::on_act_test2_triggered()
+{
+    auto cells = ui->tabWidget->currentWidget()->findChildren<wd_cell_sql*>("cell");
+    if (cells.isEmpty()) {qDebug() << "empty"; return;}
+    qDebug() << combobox_model->rowCount();
+    for(auto &cell :cells){
+        cell->set_combobox_model(combobox_model);
     }
 }
 
@@ -107,6 +119,9 @@ int MainWindow::new_sql_server(const QString &name) {
     auto tmp = transfer::get_mysql_connection(name);
     if (!tmp.isNull() && tmp.is_connected()){
         current_connections[name] = tmp;
+        combobox_model->insertRow(combobox_model->rowCount());
+        auto index = combobox_model->index(combobox_model->rowCount()-1);
+        combobox_model->setData(index, name);
         return 0;
     }
     else {
@@ -118,6 +133,7 @@ void MainWindow::del_sql_server(const QString &name) {
     if (current_connections.contains(name))
         current_connections.remove(name);
 }
+
 
 void MainWindow::on_interface_connections_itemDoubleClicked(QTreeWidgetItem *item, int column)
 {

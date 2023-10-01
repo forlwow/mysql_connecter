@@ -1,6 +1,7 @@
 #include "wd_cell.h"
 #include "ui_wd_cell.h"
 #include <QScrollBar>
+#include <QComboBox>
 
 wd_cell::wd_cell(QWidget *parent) :
     QWidget(parent),

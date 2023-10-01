@@ -6,6 +6,7 @@ D:/OneDrive/OneDrive\ -\ MSFT/Codes_Qt/mysql_connecter/build/mysql_connecter_aut
   D:/CppQt/6.2.4/mingw_64/include/QtCore/QSet \
   D:/CppQt/6.2.4/mingw_64/include/QtCore/QSharedPointer \
   D:/CppQt/6.2.4/mingw_64/include/QtCore/QString \
+  D:/CppQt/6.2.4/mingw_64/include/QtCore/QStringListModel \
   D:/CppQt/6.2.4/mingw_64/include/QtCore/qabstractitemmodel.h \
   D:/CppQt/6.2.4/mingw_64/include/QtCore/qalgorithms.h \
   D:/CppQt/6.2.4/mingw_64/include/QtCore/qanystringview.h \
@@ -70,6 +71,7 @@ D:/OneDrive/OneDrive\ -\ MSFT/Codes_Qt/mysql_connecter/build/mysql_connecter_aut
   D:/CppQt/6.2.4/mingw_64/include/QtCore/qstringalgorithms.h \
   D:/CppQt/6.2.4/mingw_64/include/QtCore/qstringconverter.h \
   D:/CppQt/6.2.4/mingw_64/include/QtCore/qstringlist.h \
+  D:/CppQt/6.2.4/mingw_64/include/QtCore/qstringlistmodel.h \
   D:/CppQt/6.2.4/mingw_64/include/QtCore/qstringliteral.h \
   D:/CppQt/6.2.4/mingw_64/include/QtCore/qstringmatcher.h \
   D:/CppQt/6.2.4/mingw_64/include/QtCore/qstringtokenizer.h \

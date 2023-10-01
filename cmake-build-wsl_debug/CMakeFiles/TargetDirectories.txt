@@ -1,0 +1,10 @@
+/mnt/d/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/cmake-build-wsl_debug/CMakeFiles/ui.dir
+/mnt/d/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/cmake-build-wsl_debug/CMakeFiles/mysql_connecter.dir
+/mnt/d/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/cmake-build-wsl_debug/CMakeFiles/edit_cache.dir
+/mnt/d/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/cmake-build-wsl_debug/CMakeFiles/rebuild_cache.dir
+/mnt/d/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/cmake-build-wsl_debug/CMakeFiles/list_install_components.dir
+/mnt/d/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/cmake-build-wsl_debug/CMakeFiles/install.dir
+/mnt/d/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/cmake-build-wsl_debug/CMakeFiles/install/local.dir
+/mnt/d/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/cmake-build-wsl_debug/CMakeFiles/install/strip.dir
+/mnt/d/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/cmake-build-wsl_debug/CMakeFiles/ui_autogen.dir
+/mnt/d/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/cmake-build-wsl_debug/CMakeFiles/mysql_connecter_autogen.dir

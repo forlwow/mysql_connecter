@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-e441cb078f0d71968580.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "mysql_connecter",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "mysql_connecter::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mysql_connecter-Debug-e3e5d9dd6341260eb4a8.json",
+					"name" : "mysql_connecter",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "mysql_connecter_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mysql_connecter_autogen-Debug-1cc804bf3683cfd9c5a7.json",
+					"name" : "mysql_connecter_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ui::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ui-Debug-0d7ff701314de1dc479f.json",
+					"name" : "ui",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ui_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ui_autogen-Debug-df7e61c9f2129ef1db2c.json",
+					"name" : "ui_autogen",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/mnt/d/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter/cmake-build-wsl_debug",
+		"source" : "/mnt/d/OneDrive/OneDrive - MSFT/Codes_Qt/mysql_connecter"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

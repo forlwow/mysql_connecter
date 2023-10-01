@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+ee60fd1619836b6d45f7257030c9d2ee CMakeFiles/mysql_connecter_autogen
+951d764016368cac9042b00a55d5747d CMakeFiles/ui_autogen
+cbdf781d8644a9fbc24bc5e2825878f2 qrc_icon.cpp

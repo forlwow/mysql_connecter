@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QSet>
 #include <QMap>
+#include <QStringListModel>
 #include <mysql_handler.h>
 #include "wd_show_table.h"
 
@@ -28,6 +29,7 @@ public:
 
     wd_create_sql_con *sql_con; // 新建连接的窗口
     QSet<QString> all_connections; // 所有保存的连接
+    QStringListModel *combobox_model; // 用于在combobox中显示的模型
     QMap<QString, sql_handler::sql_handler<sql_handler::MySQL_Handler>> current_connections; // 已经连接的连接
 
 public:
@@ -49,6 +51,8 @@ private slots:
     void on_act_test_triggered();   // 测试按钮
 
     void on_interface_connections_itemDoubleClicked(QTreeWidgetItem *item, int column);
+
+    void on_act_test2_triggered();
 
 private:
     Ui::MainWindow *ui;

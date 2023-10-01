@@ -53,3 +53,4 @@ void outputRedirection(QtMsgType type, const QMessageLogContext &context, const 
         "\n"
     );
 }
+

@@ -17,7 +17,7 @@ MySQL_Handler::MySQL_Handler():
 }
 
 MySQL_Handler::~MySQL_Handler(){
-    qDebug() << transfer::chars2qs("Deleter MySQL_Handler");
+    qDebug() << transfer::chars2qs("Delete MySQL_Handler");
 }
 
 int MySQL_Handler::connect(const QList<QString> &data){
@@ -120,4 +120,9 @@ bool MySQL_Handler::is_connected(){
     QString st = transfer::chars2qs(stat);
     if (st.first(4) != transfer::chars2qs("Lost")) return true;
     else return false;
+}
+
+void sql_handler::MySQL_Handler::disconnect() {
+    mysql_connection.reset(nullptr);
+    result.reset(nullptr);
 }

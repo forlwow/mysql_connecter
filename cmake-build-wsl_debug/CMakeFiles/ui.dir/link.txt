@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../bin/libui.a CMakeFiles/ui.dir/ui_autogen/mocs_compilation.cpp.o
+/usr/bin/ranlib ../bin/libui.a

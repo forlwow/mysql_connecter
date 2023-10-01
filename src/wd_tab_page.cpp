@@ -4,8 +4,8 @@
 #include <QVBoxLayout>
 #include <QTableView>
 
-wd_tab_page::wd_tab_page(QWidget *parent):
-    QScrollArea(parent)
+wd_tab_page::wd_tab_page(QWidget *parent, QStringListModel *model, map_name_sql *connections):
+    QScrollArea(parent), combobox_model(model), cur_connections(connections)
 {
     setup_ui();
     this->setAttribute(Qt::WA_QuitOnClose, false);
@@ -45,8 +45,10 @@ void wd_tab_page::setup_ui() {
 wd_cell_sql *wd_tab_page::create_cell() const {
     auto res = new wd_cell_sql();
     res->setObjectName("cell");
+    res->set_combobox_model(combobox_model);
     connect(res, &wd_cell_sql::editor_changed, this, &wd_tab_page::on_act_cell_height_changed);
     connect(res, &wd_cell_sql::tableview_doubleClicked, this, &wd_tab_page::on_act_tableView_double_clicked);
+    connect(res, &wd_cell_sql::combobox_changed, this, &wd_tab_page::on_cell_combobox_changed);
     return res;
 }
 
@@ -85,4 +87,20 @@ void wd_tab_page::on_act_tableView_double_clicked(const QModelIndex &index) {
     auto show_model_wd = new wd_show_table();
     show_model_wd->set_model(tableview->model());
     show_model_wd->show();
+}
+
+void wd_tab_page::set_sql_model(QStringListModel *model) {
+    if(combobox_model)
+        combobox_model = model;
+}
+
+void wd_tab_page::on_cell_combobox_changed(const QString &data) {
+    auto cell = qobject_cast<wd_cell_sql*>(sender());
+    if (!cell) return;
+    if (cur_connections->contains(data))
+        cell->set_sql_tool(cur_connections->take(data));
+    else {
+        cell->get_combobox_select()->setCurrentIndex(0);
+        cell->reset_tool();
+    }
 }

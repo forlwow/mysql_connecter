@@ -60,6 +60,7 @@
      <string>编辑</string>
     </property>
     <addaction name="act_test"/>
+    <addaction name="act_test2"/>
    </widget>
    <addaction name="menu"/>
    <addaction name="menu_2"/>
@@ -94,6 +95,11 @@
   <action name="act_test">
    <property name="text">
     <string>测试</string>
+   </property>
+  </action>
+  <action name="act_test2">
+   <property name="text">
+    <string>test2</string>
    </property>
   </action>
  </widget>

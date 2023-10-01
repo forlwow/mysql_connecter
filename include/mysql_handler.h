@@ -35,6 +35,8 @@ public:
 
     bool is_connected() override;
 
+    void disconnect() override;
+
 protected:
     static MYSQL *tester;
 
