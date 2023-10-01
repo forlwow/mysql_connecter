@@ -101,25 +101,25 @@ void MainWindow::new_tab(){
 void MainWindow::on_act_test_triggered()
 {
     auto i = current_connections["tests"];
-    qDebug() << "";
+    qDebug() << current_connections.size();
+    if (!i) return;
+    qDebug() << i.isNull();
+    qDebug() << i->is_connected();
 }
 
 void MainWindow::on_act_test2_triggered()
 {
-    auto cells = ui->tabWidget->currentWidget()->findChildren<wd_cell_sql*>("cell");
-    if (cells.isEmpty()) {qDebug() << "empty"; return;}
-    qDebug() << combobox_model->rowCount();
-    for(auto &cell :cells){
-        cell->set_combobox_model(combobox_model);
-    }
+    del_sql_server("tests");
 }
 
 int MainWindow::new_sql_server(const QString &name) {
     if (current_connections.count(name)) return 1;
     auto tmp = transfer::get_mysql_connection(name);
-    if (!tmp.isNull() && tmp.is_connected()){
-        current_connections[name] = tmp;
+    if (!tmp.isNull() && tmp->is_connected()){
+
+        current_connections.insert(name, tmp);
         combobox_model->insertRow(combobox_model->rowCount());
+
         auto index = combobox_model->index(combobox_model->rowCount()-1);
         combobox_model->setData(index, name);
         return 0;
@@ -132,6 +132,10 @@ int MainWindow::new_sql_server(const QString &name) {
 void MainWindow::del_sql_server(const QString &name) {
     if (current_connections.contains(name))
         current_connections.remove(name);
+    auto index = combobox_model->stringList().indexOf(name);
+    if (index != -1){
+        combobox_model->removeRow(index);
+    }
 }
 
 

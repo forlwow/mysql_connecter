@@ -30,6 +30,9 @@ signals:
 
     void tableview_doubleClicked(const QModelIndex &index);
 
+    void btn_add_clicked();
+    void btn_remove_clicked();
+
 protected:
     int font_size;  // 字体大小
 
@@ -51,6 +54,9 @@ protected slots:
     void line_num_content_adjust();
 
     void pass_tableview_doubleClicked(const QModelIndex &index);
+
+    void pass_btn_add_clicked();
+    void pass_btn_remove_clicked();
 };
 
 #endif // WD_CELL_H

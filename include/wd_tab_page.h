@@ -2,9 +2,10 @@
 #define WD_TAB_PAGE_H
 
 #include <QScrollArea>
+#include <QVBoxLayout>
 #include "wd_cell_sql.h"
 
-typedef QMap<QString, sql_handler::sql_handler<sql_handler::MySQL_Handler>> map_name_sql;
+typedef QMap<QString, sql_handler::sql_handler> map_name_sql;
 
 class wd_tab_page: public QScrollArea {
     Q_OBJECT
@@ -20,6 +21,7 @@ protected:
 
 protected:
     QWidget *ui;
+    QVBoxLayout *ui_layout;
 
     QStringListModel *combobox_model;
 
@@ -31,6 +33,9 @@ protected slots:
     void on_act_tableView_double_clicked(const QModelIndex &index);
 
     void on_cell_combobox_changed(const QString &data);
+
+    void insert_cell(); // 插入单元格
+    void remove_cell();
 };
 
 

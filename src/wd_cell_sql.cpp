@@ -24,9 +24,11 @@ wd_cell_sql::wd_cell_sql(QWidget *parent) :
     ui->tableView->setModel(new QStandardItemModel);
     ui->tableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
     emit set_text_signal(transfer::chars2qs("USE atguigudb;"));
+
+    qDebug() << "create cell";
 }
 
-void wd_cell_sql::set_sql_tool(const sql_handler::sql_handler<sql_handler::MySQL_Handler>& tmp_sql_tools) {
+void wd_cell_sql::set_sql_tool(const sql_handler::sql_handler& tmp_sql_tools) {
     sql_tools = tmp_sql_tools;
 }
 
@@ -36,11 +38,11 @@ int wd_cell_sql::query(const QString &data){
         set_model_msg(model, transfer::chars2qs("MYSQL init error"));
         return 3;
     }
-    if (!sql_tools.is_connected()){
+    if (!sql_tools->is_connected()){
         set_model_msg(model, transfer::chars2qs("MYSQL connect error"));
         return 1;
     }
-    sql_tools.query(model, data);
+    sql_tools->query(model, data);
     return 0;
 }
 

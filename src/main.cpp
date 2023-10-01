@@ -47,8 +47,8 @@ void outputRedirection(QtMsgType type, const QMessageLogContext &context, const 
     print(
         output, 
         localMsg.constData(), "\n",
-        // context.file, "\n",
-        // "line:", debug_line.data(), "\n",
+//         context.file, "\n",
+//         "line:", debug_line.data(), "\n",
         context.function, "\n",
         "\n"
     );

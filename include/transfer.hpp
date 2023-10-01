@@ -1,5 +1,5 @@
-#ifndef __TRANSFER_H_
-#define __TRANSFER_H_
+#ifndef TRANSFER_H_
+#define TRANSFER_H_
 
 #include <QSet>
 #include <QStringList>
@@ -92,15 +92,14 @@ inline unsigned int qs2uint(const QString &data){
     return data.toLocal8Bit().toUInt();
 }
 
-inline sql_handler::sql_handler<sql_handler::MySQL_Handler> get_mysql_connection(const QString &name){
-    sql_handler::sql_handler<sql_handler::MySQL_Handler> res;
-    res.create_new_sql();
+inline sql_handler::sql_handler get_mysql_connection(const QString &name){
+    sql_handler::sql_handler res(new sql_handler::MySQL_Handler);
     if (res.isNull()) return {};
     // 使用qs2qb防止乱码
     QStringList con_data = stdsvector2qslist(con_handler::get_con_data(qs2qb(name).data()));
     if (con_data.size() != con_handler::CON_DATA_SIZE) return {};
-    res.connect(con_data);
-    if (res.is_connected())
+    res->connect(con_data);
+    if (res->is_connected())
     {
         return res;
     }

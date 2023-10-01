@@ -25,15 +25,22 @@ public:
 typedef QSharedPointer<sql_handler_inner> sql_handler;
 
 //template<typename T>
-//class sql_handler{
+//class sql_handler_wrapper{
 //protected:
 //    QSharedPointer<sql_handler_inner> ptr_sql_handler;
 //
 //public:
-//    sql_handler() :ptr_sql_handler() {}
+//    sql_handler_wrapper(T* inner=nullptr) :ptr_sql_handler(inner) {qDebug() << "create sql_handler";}
 //
-//    ~sql_handler() {qDebug() << "delete sql_handler";};
-////    ~sql_handler() = default;
+//    ~sql_handler_wrapper() {qDebug() << "delete sql_handler";}
+//
+//    QSharedPointer<sql_handler_inner> operator->(){
+//        return ptr_sql_handler;
+//    }
+//
+//    bool operator!(){
+//        return isNull();
+//    }
 //
 //    void create_new_sql(){
 //        ptr_sql_handler.reset(new T);
@@ -64,6 +71,8 @@ typedef QSharedPointer<sql_handler_inner> sql_handler;
 //    }
 //
 //};
+////
+//typedef sql_handler_wrapper<sql_handler_inner> sql_handler;
 
 }
 #endif

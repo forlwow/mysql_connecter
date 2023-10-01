@@ -14,7 +14,7 @@ public:
     ~wd_cell_sql() override = default;
 
     // 设置sql连接
-    void set_sql_tool(const sql_handler::sql_handler<sql_handler::MySQL_Handler>& tmp_sql_tools);
+    void set_sql_tool(const sql_handler::sql_handler& tmp_sql_tools);
 
     void reset_tool();
 
@@ -44,7 +44,7 @@ signals:
     void combobox_changed(const QString &data);
 
 protected:
-    sql_handler::sql_handler<sql_handler::MySQL_Handler> sql_tools;
+    sql_handler::sql_handler sql_tools;
 
     QComboBox *select_sql;
 };

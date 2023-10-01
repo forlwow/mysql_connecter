@@ -1,7 +1,6 @@
 #include "wd_tab_page.h"
 #include "wd_show_table.h"
 #include <QScrollArea>
-#include <QVBoxLayout>
 #include <QTableView>
 
 wd_tab_page::wd_tab_page(QWidget *parent, QStringListModel *model, map_name_sql *connections):
@@ -16,30 +15,29 @@ wd_tab_page::~wd_tab_page() noexcept {
 }
 
 void wd_tab_page::setup_ui() {
-    wd_cell_sql *sql_res = create_cell();
-    wd_cell_sql *sql_res2 = create_cell();
-
+    // ScrollAreaContent
     this->setObjectName("QScrollArea");
-    auto scol_content = new QWidget();
-    scol_content->setObjectName("QScrollAreaContent");
-    scol_content->resize(1000, 1000);
-    this->setWidget(scol_content);
+    auto space = new QWidget(); // 占位
+    ui_layout = new QVBoxLayout();
 
-    auto space = new QWidget();
+    wd_cell_sql *sql_res = create_cell();
+
+    ui = new QWidget();
+    ui->setObjectName("QScrollAreaContent");
+    ui->resize(1000, 1000);
+    this->setWidget(ui);
+
     space->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     space->setObjectName("space");
 
-    auto vlayout = new QVBoxLayout();
-    vlayout->setObjectName("QVBoxLayout");
-    vlayout->addWidget(sql_res);
-    vlayout->setStretchFactor(sql_res, 1);
-    vlayout->addWidget(sql_res2);
-    vlayout->setStretchFactor(sql_res2, 1);
-    vlayout->addWidget(space);
-    vlayout->setStretchFactor(space, INT16_MAX);
+    ui_layout->setObjectName("QVBoxLayout");
+    ui_layout->addWidget(sql_res);
+    ui_layout->setStretchFactor(sql_res, 1);
+    ui_layout->addWidget(space);
+    ui_layout->setStretchFactor(space, INT16_MAX);
 
-    scol_content->setLayout(vlayout);
-    this->setWidget(scol_content);
+    ui->setLayout(ui_layout);
+    this->setWidget(ui);
 }
 
 wd_cell_sql *wd_tab_page::create_cell() const {
@@ -49,6 +47,8 @@ wd_cell_sql *wd_tab_page::create_cell() const {
     connect(res, &wd_cell_sql::editor_changed, this, &wd_tab_page::on_act_cell_height_changed);
     connect(res, &wd_cell_sql::tableview_doubleClicked, this, &wd_tab_page::on_act_tableView_double_clicked);
     connect(res, &wd_cell_sql::combobox_changed, this, &wd_tab_page::on_cell_combobox_changed);
+    connect(res, &wd_cell_sql::btn_add_clicked, this, &wd_tab_page::insert_cell);
+    connect(res, &wd_cell_sql::btn_remove_clicked, this, &wd_tab_page::remove_cell);
     return res;
 }
 
@@ -98,9 +98,28 @@ void wd_tab_page::on_cell_combobox_changed(const QString &data) {
     auto cell = qobject_cast<wd_cell_sql*>(sender());
     if (!cell) return;
     if (cur_connections->contains(data))
-        cell->set_sql_tool(cur_connections->take(data));
+        cell->set_sql_tool(cur_connections->value(data));
     else {
         cell->get_combobox_select()->setCurrentIndex(0);
         cell->reset_tool();
     }
+}
+
+void wd_tab_page::insert_cell() {
+    auto cell = qobject_cast<wd_cell_sql*>(sender());
+    if (!cell) return;
+    auto index = ui_layout->indexOf(cell);
+    if (index != -1){
+        auto new_cell = create_cell();
+        ui_layout->insertWidget(index + 1, new_cell);
+        ui_layout->setStretchFactor(new_cell, 1);
+    }
+}
+
+void wd_tab_page::remove_cell() {
+    auto cell = qobject_cast<wd_cell_sql*>(sender());
+    if (!cell) return;
+    if (ui_layout->count() <= 2) return;
+    ui_layout->removeWidget(cell);
+    cell->deleteLater();
 }

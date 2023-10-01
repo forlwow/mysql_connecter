@@ -37,6 +37,8 @@ wd_cell::wd_cell(QWidget *parent) :
 
     // 传递TableView双击信号
     connect(ui->tableView, &QTableView::doubleClicked, this, &wd_cell::pass_tableview_doubleClicked);
+    connect(ui->btn_add_cell, &QPushButton::clicked, this, &wd_cell::pass_btn_add_clicked);
+    connect(ui->btn_del_cell, &QPushButton::clicked, this, &wd_cell::pass_btn_remove_clicked);
 }
 
 wd_cell::~wd_cell()
@@ -122,4 +124,12 @@ void wd_cell::pass_tableview_doubleClicked(const QModelIndex &index) {
 
 QTableView *wd_cell::get_table_view() {
     return ui->tableView;
+}
+
+void wd_cell::pass_btn_add_clicked() {
+    emit btn_add_clicked();
+}
+
+void wd_cell::pass_btn_remove_clicked() {
+    emit btn_remove_clicked();
 }
